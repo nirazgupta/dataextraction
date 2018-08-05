@@ -87,21 +87,15 @@ WSGI_APPLICATION = 'dataExtraction.wsgi.application'
 #     }
 # }
 
-# DATABASES = {
-#     'default': {
-#         'ENGINE': 'django.db.backends.sqlite3',
-#         'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
-#     }
-# }
 
 DATABASES = {
     'default': {
         # 'ENGINE': 'django.db.backends.sqlite3',
         # 'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
         'ENGINE': 'django.db.backends.mysql',
-        'NAME': 'heroku_20563fd016b43d6',
-        'USER': 'bf34c495a25024',
-        'PASSWORD': '7c61ea03',
+        'NAME': 'heroku_7ee9352f9f4f644',
+        'USER': 'bce31ca4833e12',
+        'PASSWORD': 'e9994edd',
         'HOST': 'us-cdbr-iron-east-01.cleardb.net',
         'PORT': ''
 
@@ -109,29 +103,6 @@ DATABASES = {
 }
 
 
-# DATABASES = {
-#     'default': {
-#         'ENGINE': 'django.db.backends.mysql',
-#         'NAME': 'dfomshs682okj',
-#         'USER': 'djbaprdpmyctbl',
-#         'PASSWORD': '3b3bc01ec206d23ef82214be99ee6055a21e069d66a887ab6f4e8581589a9cf6',
-#         'HOST': 'ec2-50-17-250-38.compute-1.amazonaws.com',
-#         'PORT': '5432'
-
-#     }
-# }
-
-# DATABASES = {
-#     'default': {
-#         'ENGINE': 'django.db.backends.mysql',
-#         'NAME': 'dfomshs682okj',
-#         'USER': 'djbaprdpmyctbl',
-#         'PASSWORD': '3b3bc01ec206d23ef82214be99ee6055a21e069d66a887ab6f4e8581589a9cf6',
-#         'HOST': 'ec2-50-17-250-38.compute-1.amazonaws.com',
-#         'PORT': '5432'
-
-#     }
-# }
 
 
 db_from_env = dj_database_url.config(conn_max_age=500)
