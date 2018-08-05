@@ -1,1 +1,1 @@
-web: gunicorn dataExtraction.wsgi.application
+web: gunicorn dataExtraction.wsgi

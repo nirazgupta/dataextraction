@@ -80,13 +80,6 @@ WSGI_APPLICATION = 'dataExtraction.wsgi.application'
 # https://docs.djangoproject.com/en/2.0/ref/settings/#databases
 
 
-DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
-    }
-}
-
 # DATABASES = {
 #     'default': {
 #         'ENGINE': 'django.db.backends.sqlite3',
@@ -96,17 +89,24 @@ DATABASES = {
 
 # DATABASES = {
 #     'default': {
-#         # 'ENGINE': 'django.db.backends.sqlite3',
-#         # 'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
-#         'ENGINE': 'django.db.backends.mysql',
-#         'NAME': 'heroku_20563fd016b43d6',
-#         'USER': 'bf34c495a25024',
-#         'PASSWORD': '7c61ea03',
-#         'HOST': 'us-cdbr-iron-east-01.cleardb.net',
-#         'PORT': ''
-
+#         'ENGINE': 'django.db.backends.sqlite3',
+#         'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
 #     }
 # }
+
+DATABASES = {
+    'default': {
+        # 'ENGINE': 'django.db.backends.sqlite3',
+        # 'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+        'ENGINE': 'django.db.backends.mysql',
+        'NAME': 'heroku_20563fd016b43d6',
+        'USER': 'bf34c495a25024',
+        'PASSWORD': '7c61ea03',
+        'HOST': 'us-cdbr-iron-east-01.cleardb.net',
+        'PORT': ''
+
+    }
+}
 
 
 # DATABASES = {
