@@ -80,27 +80,27 @@ WSGI_APPLICATION = 'dataExtraction.wsgi.application'
 # https://docs.djangoproject.com/en/2.0/ref/settings/#databases
 
 
-DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
-    }
-}
-
-
 # DATABASES = {
 #     'default': {
-#         # 'ENGINE': 'django.db.backends.sqlite3',
-#         # 'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
-#         'ENGINE': 'django.db.backends.mysql',
-#         'NAME': 'heroku_7ee9352f9f4f644',
-#         'USER': 'bce31ca4833e12',
-#         'PASSWORD': 'e9994edd',
-#         'HOST': 'us-cdbr-iron-east-01.cleardb.net',
-#         'PORT': ''
-
+#         'ENGINE': 'django.db.backends.sqlite3',
+#         'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
 #     }
 # }
+
+
+DATABASES = {
+    'default': {
+        # 'ENGINE': 'django.db.backends.sqlite3',
+        # 'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+        'ENGINE': 'django.db.backends.mysql',
+        'NAME': 'heroku_7ee9352f9f4f644',
+        'USER': 'bce31ca4833e12',
+        'PASSWORD': 'e9994edd',
+        'HOST': 'us-cdbr-iron-east-01.cleardb.net',
+        'PORT': ''
+
+    }
+}
 
 db_from_env = dj_database_url.config(conn_max_age=500)
 DATABASES['default'].update(db_from_env)
