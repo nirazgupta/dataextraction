@@ -1,0 +1,25 @@
+1. disable the collectstatic during a deploy
+
+heroku config:set DISABLE_COLLECTSTATIC=1
+
+2. deploy
+
+git push heroku master
+
+3. run migrations (django 1.10 added at least one)
+
+heroku run python manage.py migrate
+
+4. run collectstatic using bower
+
+heroku run 'bower install --config.interactive=false;grunt prep;python manage.py collectstatic --noinput'
+
+5. enable collecstatic for future deploys
+
+heroku config:unset DISABLE_COLLECTSTATIC
+
+6. try it on your own (optional)
+
+heroku run python manage.py collectstatic
+
+future deploys should work as normal from now on

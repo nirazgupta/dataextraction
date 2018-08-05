@@ -1,0 +1,80 @@
+A
+4
+C
+B
+D
+A
+B
+C
+3
+2
+1
+4
+3
+2
+1
+D
+DWG. NO.
+Phone (360)738-8230   Fax (360)734-4195
+425 Sequoia Drive   Bellingham, WA 98226
+.0000±.002
+INCH
+.000±.005
+.00±.010
+--
+DO NOT SCALE DRAWING
+MATERIAL
+FINISH
+--
+ANGLES
+±0°30'
+COMMENTS:
+-
+.000±.051
+.0±.254
+.00±.127
+MM
+-
+-
+-
+-
+-
+-
+-
+DRAWN
+-
+K. LACY
+SCALE 1:1
+SIZE
+B
+DATE
+NAME
+-
+-
+-
+-
+6-16-06
+BusBar 10 x 8-32 Screw
+WEIGHT:  POUNDS 
+SHEET 1 OF 1
+REV.
+0
+2300-2301 Catalog Drawing
+THIRD ANGLE PROJECTION
+-
+-
+-
+REVISIONS
+APPROVED
+DATE
+DESCRIPTION
+REV.
+ZONE
+-
+-
+SIDE
+#8-32 SCREW
+1/4-20 STUD
+TOP
+END
+ISO VIEW

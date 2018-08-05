@@ -1,0 +1,52 @@
+.btn.btn-success {
+    width: 100%
+}
+
+.row.btn.btn-success.detail > a {
+    color: white;
+}
+
+.new_loan {
+    color: white;
+}
+.new_loan:hover {
+    color: white;
+    text-decoration-line: none;
+}
+
+
+.tbody a {
+    color: #00325e;
+}
+
+.ht_logo {
+    margin-top: 10;
+}
+
+.selectFile {
+    display: inline;
+}
+
+.fileUploadForm {
+    margin-left: 0.25em;
+}
+
+#card_scroll {
+    overflow-y: scroll;
+    /* position: absolute; */
+    height: 33%;
+}
+#card_scroll_img {
+    overflow-y: scroll;
+    /* position: absolute; */
+    height: 75%;
+}
+
+#pdfimg {
+    height: 200px;
+}
+
+#fileUpload {
+    margin-right: 5px;
+    margin-top: -6px;
+}

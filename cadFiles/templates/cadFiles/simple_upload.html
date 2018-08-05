@@ -1,0 +1,106 @@
+{% extends 'cadFiles/layout.html' %}
+
+
+
+{% block body %}
+{% include 'cadFiles/partials/banner.html' %}
+<div class="container ">
+  <div class="container">
+  <div class = "row">
+    <form class = "col s12" method="post" enctype="multipart/form-data">
+      {% csrf_token %}
+
+      <fieldset id="radiogrp1">
+        <p class="selectFile">Select a file: </p>
+        <label>
+          <input class="with-gap" id="pdf" name="group1" type="radio" value="pdf" />
+          <span>PDF</span>
+        </label>
+        <label>
+          <input class="with-gap" id="dxf" name="group1" type="radio" value="dxf"/>
+          <span>DXF</span>
+        </label>
+    </fieldset>
+    
+       <div class = "row" id="fileUploadForm">
+          {% comment %} <label>Materialize File Input</label> {% endcomment %}
+          <div class = "file-field input-field">
+             <div class = "btn">
+                <span>Browse</span>
+                <input type = "file" name="myfile" id="file-upload"/>
+             </div>
+             
+             <div class = "file-path-wrapper" >
+                <input class = "file-path validate" type = "text" placeholder = "Upload file" id="file-upload-filename"/>
+             </div>
+          </div>
+          {% comment %} {% if uploaded_file_url %}
+            <p>File uploaded at: <a href="{{ uploaded_file_url }}">{{ uploaded_file_url }}</a></p>
+          {% endif %} {% endcomment %}
+       </div>
+
+
+       <fieldset id="radiogrp2" style="display: none";>
+          <p class="selectFile">Choose type of data to extract: </p>
+        <label>
+          <input class="with-gap" id="ext_text" name="group2" type="radio" value="raw_text"/>
+          <span>TEXT</span>
+        </label>
+        <label>
+          <input class="with-gap" id="ext_table" name="group2" type="radio" value="table"/>
+          <span>TABLE</span>
+        </label>
+        <label>
+          <input class="with-gap" id="ext_image" name="group2" type="radio" value="image"/>
+          <span>IMAGES</span>
+        </label>
+      </fieldset>
+      
+      <fieldset id="radiogrp3" style="display: none";>
+      <label>
+        <input class="with-gap" id="ext_text" name="group3" type="radio" value="raw_text"/>
+        <span>Poly line coordintes</span>
+      </label>
+      <label>
+        <input class="with-gap" id="ext_table" name="group3" type="radio" value="table"/>
+        <span>Arc coordintes</span>
+      </label>
+      <label>
+        <input class="with-gap" id="ext_image" name="group3" type="radio" value="image"/>
+        <span>Line coordintes</span>
+      </label>
+      </fieldset>
+
+      <button class="btn waves-effect waves-light" type="submit" name="action">Upload File.
+          <i class="material-icons right">send</i>
+        </button>
+
+        <a class="waves-effect waves-light btn" href="/files">View Files</a>
+    
+    </form>       
+ </div>
+
+
+
+  <div class="col-lg text-center">
+    <p>{{message}}</p>
+  </div>
+
+{% comment %} <div class="content" id="mycontent">
+  <div class="panel panel-default">
+      <a class="waves-effect waves-light btn modal-trigger" href="#modal1" id="loadDiv">Text</a>
+      <a class="waves-effect waves-light btn modal-trigger" href="#modal1" id="loadDiv">Images</a>
+      <a class="waves-effect waves-light btn modal-trigger" href="#modal1" id="loadDiv">Table</a>
+
+      <h4 >This is content area.</h4>
+      <div id="textarea"></div>
+      <p id="textarea">{{content}}</p>
+  </div> {% endcomment %}
+</div>
+</div>
+</div>
+
+<footer class="page-footer teal lighten-2">
+    {% include 'cadFiles/partials/_footer.html' %}
+</footer>
+{% endblock %}

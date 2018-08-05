@@ -1,0 +1,974 @@
+  
+ 
+ 
+ 
+ 
+CITYRINGEN 
+Branch off to Sydhavnen 
+SHG-CB 1.1.A 
+Abbreviations and Definitions 
+Common Basis 
+ 
+CR-CSJV-GEN=GSh-GC-CON-SPE-220402   
+3.0 
+2017-12-15 
+COWI SYSTRA Joint Venture 
+ 
+MKJ 
+ 
+Mikkel Kjær Jensen 
+CBO 
+CBO 
+SDE 
+ 
+17 
+Christian Boye 
+Christian Boye 
+Søren Degn Eskesen 
+Document ID: 
+Version: 
+Issue date: 
+Issued by: 
+ 
+Employers 
+Approval 
+Approved by: 
+Checked by: 
+Prepared by: 
+ 
+Pages: 
+ 
+ 
+ 
+ 
+ 
+ 
+Metroselskabet 
+CITYRINGEN BRANCH OFF TO SYDHAVNEN 
+SHG-CB 1.1.A 
+COWI SYSTRA Joint Venture is Metroselskabet’s Design Consultant for the project. 
+CR-CSJV-GEN=GSh-GC-CON-SPE-220402   
+ 
+Version: 3.0 
+ 
+Date: 2017-12-15 
+Page: 2 of 17 
+ 
+Table of contents 
+Metroselskabet 
+CITYRINGEN BRANCH OFF TO SYDHAVNEN 
+SHG-CB 1.1.A 
+1 
+2 
+3 
+4 
+Introduction 
+Abbreviations 
+Station and Shafts abbreviations 
+Definitions 
+4 
+5 
+13 
+14 
+Appendices 
+ 
+Table of attachments 
+ATT No. 
+Title/Subject 
+Issuer's doc. ID 
+Format 
+File/volume name 
+Size 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+Revision summary 
+Version 
+Date 
+Scope of revision 
+Change description 
+3.0 
+2017-12-15  Contract version 
+ 
+ 
+ 
+CR-CSJV-GEN=GSh-GC-CON-SPE-220402   
+ 
+Version: 3.0 
+ 
+Date: 2017-12-15 
+Page: 3 of 17 
+ 
+ 
+1 
+Introduction 
+Metroselskabet 
+CITYRINGEN BRANCH OFF TO SYDHAVNEN 
+SHG-CB 1.1.A 
+The purpose of this document is to settle General Abbreviations and Definitions 
+for all works on Cityringen - Branch off to Sydhavnen. 
+ 
+The list is by no means exhaustive and the intention is to offer a reference to 
+look up abbreviations and definitions generally used. 
+ 
+Abbreviations for names of stations and shafts are placed in a subsection 
+‘Stations and shafts abbreviations’ within the ‘Abbreviation’ paragraph. 
+ 
+High level definitions defined in the SHG-AB/SB are not included in this 
+document.  
+Milestone and Process stage abbreviations and definitions are not included in 
+this document. Refer to the document SHG-CB 4.2 for these. 
+Abbreviations and definitions, which are specific for a contract, are included as a 
+sub-section “Terminology, Abbreviations and Definitions” in the individual 
+technical, contractual or commercial sections of the Tender Documents.  
+ 
+ 
+CR-CSJV-GEN=GSh-GC-CON-SPE-220402   
+ 
+Version: 3.0 
+ 
+Date: 2017-12-15 
+Page: 4 of 17 
+ 
+2 
+Abbreviations 
+Metroselskabet 
+CITYRINGEN BRANCH OFF TO SYDHAVNEN 
+SHG-CB 1.1.A 
+ABT93 
+Almindelige Betingelser for Totalentreprise  
+(General Conditions of Contract for Turnkey Contracts) 
+AB/SB 
+Almindelige og Særlige Betingelser (Conditions of Contract) 
+AC 
+ACS 
+ADM 
+ALARP 
+A&R 
+ASTM  
+ASTS 
+AT 
+ATC 
+ATM 
+ATO 
+ATP 
+ATS 
+AW 
+BAT 
+B&H 
+BCS 
+BDK 
+Alternating Current 
+Access Control System 
+Administration 
+As Low As Reasonably Practicable 
+Area & Rights, dealing with inspections and expropriation of land  
+American Society for Testing and Materials  
+Ansaldo STS (TSC) 
+Arbejdstilsynet  
+(Working Environment Authority) 
+Automatic Train Control 
+Automatic Teller Machine 
+Automatic Train Operation 
+Automatic Train Protection 
+Automatic Train Supervision 
+Architectural Works 
+Best Available Technology 
+By og Havn 
+Building condition survey 
+Banedanmark 
+BOStrab 
+German Federal Regulations covering metro operations 
+BRA 
+BRMP 
+BS 
+BSS 
+CBTC 
+CC 
+Building risk assessment 
+Building risk management plan 
+British Standards, including Codes of Practice. 
+Building structural surveys 
+Communication Based Train Control 
+Control Centre 
+SHG-CB 
+Cityringen - Branch off to Sydhavnen - Common Basis 
+CCTV 
+CD 
+CFD 
+CMC 
+Closed-circuit television 
+Concept Design / Conceptual Design 
+Computerrized Fluid Dynamics 
+Control and Maintenance Centre 
+CR-CSJV-GEN=GSh-GC-CON-SPE-220402   
+ 
+Version: 3.0 
+ 
+Date: 2017-12-15 
+Page: 5 of 17 
+ 
+Metroselskabet 
+CITYRINGEN BRANCH OFF TO SYDHAVNEN 
+SHG-CB 1.1.A 
+CPM 
+CPU 
+CR 
+CRSH 
+CRSH1 
+CRSH4 
+CRSH5 
+CRSH6 
+CRSH-NEL-
+RB1 
+CRSH-NEL-
+RB2 
+CRSH-NEL-
+RB3 
+CS 
+CSJV 
+CSM 
+CTS 
+CW  
+CWC 
+D&B 
+DBI  
+DC 
+DCP 
+DD 
+DIN  
+DMS 
+Critical Path Method 
+Central Processing Unit 
+Cityringen 
+Cityringen - Branch off to Sydhavnen 
+CRSH Contract #1, Underground Civil Works.  
+CRSH1 is also used as an abbreviation for CRSH1 Contractor. 
+CRSH Contract #4, Transportation System Works.  
+CRSH4 is also used as an abbreviation for CRSH4 Contractor. 
+CRSH Contract #5, Transfer Works below KØR tracks.  
+CRSH5 is also used as an abbreviation for CRSH5 Contractor. 
+CRSH Contract #6, Concourse Hall at Nel.  
+CRSH6 is also used as an abbreviation for CRSH6 Contractor. 
+CRSH Contract for Interim Platform Ringbane Station at Nel. 
+CRSH Contract for Temporary Ringbane Station at Nel. 
+CRSH Contract for Permanent Ringbane Station at Nel. 
+Contract Schedule 
+COWI-SYSTRA Joint Venture (Design Consultant on Cityringen - Branch 
+off to Sydhavnen) 
+Common Safety Method 
+Contract Time Schedule 
+Civil Works  
+Civil Works Contractor on Cityringen, CMT 
+Design and Build 
+Dansk Brandteknisk Institut  
+(Danish Fire Technical Institute)  
+Direct Current 
+Document Control Plan  
+Detailed Design 
+Deutsche Industrinorm (German Industrial Standard) 
+Document Management System 
+DONG 
+DONG Energy (Energy Company) 
+DS  
+DS/EN 
+DSB 
+Danish Standard  
+European standards adopted and approved as Danish standards 
+Danske Statsbaner  
+(Danish State Railways) 
+CR-CSJV-GEN=GSh-GC-CON-SPE-220402   
+ 
+Version: 3.0 
+ 
+Date: 2017-12-15 
+Page: 6 of 17 
+ 
+Metroselskabet 
+CITYRINGEN BRANCH OFF TO SYDHAVNEN 
+SHG-CB 1.1.A 
+DVR90 
+DWS 
+EAP 
+ECC 
+ECP 
+EDH 
+EDP 
+EIA 
+EMC 
+EMS 
+EN 
+EPCH 
+ERP 
+ESH 
+ETSI  
+EU 
+FT 
+GIS 
+GSM 
+GUI 
+Dansk Vertikal Reference 1990 
+Design Working Schedule 
+Environmental Action Plan 
+Emergency Control Centre 
+Emergency Call Point 
+Emergency Door Handle 
+Electronic Data Processing 
+Environmental Impact Assessment (VVM in Danish) 
+Electromagnetic compatibility 
+Environmental Management System 
+European Norm 
+Emergency Power Cut off Handle 
+Enterprise Resource Planning 
+Emergency Stop Handle 
+European Telecommunication Standard Institute  
+European Union 
+Form of Tender 
+Geographical information system 
+Global System for Mobile communications 
+Graphic User Interface 
+HAZOPS  
+Hazard and Operability Studies  
+HDR 
+HOFOR 
+HR 
+HRMS 
+HV  
+HVAC  
+ICDD 
+IDS 
+IEEE  
+IES 
+IP 
+ISA 
+ISO  
+Hydrogeological Design Report 
+Hovedstadsområdets Forsyningsselskab (Greater Copenhagen Utility 
+Services 
+Human Resource 
+Human Resource Management System 
+High Voltage  
+Heating, Ventilation & Air Conditioning.  
+Interface Control Definition Document 
+Intrusion Detection system  
+Institute of Electrical and Electronic Engineers  
+Information Exchange Schedule 
+Internet Protocol 
+Independent Safety Assessor 
+International Standard Organisation  
+CR-CSJV-GEN=GSh-GC-CON-SPE-220402   
+ 
+Version: 3.0 
+ 
+Date: 2017-12-15 
+Page: 7 of 17 
+ 
+Metroselskabet 
+CITYRINGEN BRANCH OFF TO SYDHAVNEN 
+SHG-CB 1.1.A 
+ITP 
+ITT 
+IWS 
+KE 
+KEN 
+KK 
+KØR 
+LAN 
+LCC 
+LCP 
+LRU 
+LV  
+M&E 
+M1 
+M2 
+M3 
+Inspection and Test Plan 
+Instruction to Tenderers 
+Initial Working Schedule 
+Københavns Energi (Copenhagen Energy Company) 
+Kinematic Envelope 
+Copenhagen Municipality (Københavns Kommune) 
+Copenhagen Ringsted Railway line (København Ringsted jernbane) 
+Local Area Network 
+Life Cycle Cost 
+Local Control Panel 
+Line Replaceable Unit: A unit designed to be removed upon failure 
+from a larger entity (product or item) in the operational environment 
+Low Voltage 
+Mechanical and Electrical 
+Existing Metro line Vanløse – Vestamager 
+Existing Metro line Vanløse - Lufthavnen 
+M3: Cityringen, Circle operation (blue line). 
+M4 
+ 
+ 
+M4: Cityringen, Pendulum Operation from Nordhavnen (Orientkaj 
+station) to Sydhavnen (Ny Ellebjerg station) (orange line). 
+ 
+CR-CSJV-GEN=GSh-GC-CON-SPE-220402   
+ 
+Version: 3.0 
+ 
+Date: 2017-12-15 
+Page: 8 of 17 
+ 
+Metroselskabet 
+CITYRINGEN BRANCH OFF TO SYDHAVNEN 
+SHG-CB 1.1.A 
+ 
+Main Control Centre 
+ 
+Multidisciplinary Civil Works consultant 
+Monitoring Database 
+MCC 
+MCW 
+MDB 
+METRA 
+A metro alarm system connecting direct to the fire brigade. 
+MMI 
+MMS 
+MRO 
+MS 
+MSD 
+MSS 
+MST 
+MSYS 
+MTS 
+MW 
+NA  
+NFPA 
+OATV 
+OC 
+OD 
+O&M  
+OHS 
+Man Machine Interface 
+Maintenance Management System 
+Metro Ready for Operation 
+Metroselskabet I/S  
+Monitoring and survey department - department with 
+responsibility for the geotechnical and hydro geological 
+investigations, monitoring and for the management of the risk 
+to buildings and other structures. 
+Material submittal sheets 
+Method Statement 
+Geotechnical, hydrogeological, underground works, building 
+and environmental monitoring system 
+Multidisciplinary Transportation System consultant 
+Material and Workmanship Specification 
+Not Applicable  
+National Fire Protection Association 
+Optical and acoustic televiewer 
+Operator Certificate 
+Område med drikkevandsinteresser (Areas with drinking water 
+interests) 
+Operation & Maintenance  
+Occupational Health and Safety 
+OHSMS 
+Occupational Health and Safety Management System 
+CR-CSJV-GEN=GSh-GC-CON-SPE-220402   
+ 
+Version: 3.0 
+ 
+Date: 2017-12-15 
+Page: 9 of 17 
+ 
+Metroselskabet 
+CITYRINGEN BRANCH OFF TO SYDHAVNEN 
+SHG-CB 1.1.A 
+OHSP 
+OIC 
+OIS 
+OLE 
+OPC 
+OPM 
+OSD  
+OTE 
+OTS 
+PABX 
+PAT 
+PB 
+PCS 
+PD 
+PI 
+PICOW 
+PICOP 
+PID 
+PIP 
+PLC  
+PMS 
+PS 
+PSDS 
+PSIS 
+PSTN 
+PV 
+PW 
+QA  
+QC  
+QEM 
+QHSE 
+QM  
+QMS 
+QP  
+QR  
+Occupational Health and Safety Plan  
+Object Identification Code 
+Object Identification System 
+Object Linking and Embedding 
+Object linking and embedding Process Control 
+Opmåling 
+(Survey contract) 
+Overall System Design  
+Over Track Exhaust 
+Overall Time Schedule 
+Private Automatic Branch eXchange 
+Plan for the advancement of the tunnel 
+Project Basis 
+Passenger Counting System 
+Preliminary Design 
+Project Information 
+Person in charge of works (=Arbejdsleder) 
+Person in charge of Possession (=Sikkerheds Ansvarlig) 
+Passenger Information Display 
+Project Implementation Plan 
+Programmable Logic Circuit  
+Project Management System 
+Power Supply 
+Platform Screen Doors System 
+Passenger Security and Information System 
+Public Switched Telephone Network 
+Passenger Vehicles 
+Permanent Way 
+Quality Assurance  
+Quality Control  
+Quality and Environmental Management 
+Quality, Health, Safety and Environment     
+Quality Manual  
+Quality Management System 
+Quality Plan  
+Quality Records  
+CR-CSJV-GEN=GSh-GC-CON-SPE-220402   
+ 
+Version: 3.0 
+ 
+Date: 2017-12-15 
+Page: 10 of 17 
+ 
+Metroselskabet 
+CITYRINGEN BRANCH OFF TO SYDHAVNEN 
+SHG-CB 1.1.A 
+QS  
+RARJV  
+RAM 
+RAMS 
+RCS 
+RI 
+RS 
+RT 
+SA 
+SB 
+Quality System  
+Rambøll Arup Joint Venture (consultant on the Branch off to 
+Nordhavnen) 
+Reliability, Availability, Maintainability 
+Reliability, Availability, Maintainability, Safety 
+Radio Communication System 
+Railway Infrastructure 
+Rolling Stock 
+Rescue Trolley 
+Service Availability  
+(also used for subsystem acceptance milestone) 
+Særlige Betingelser (Special Conditions) 
+SCADA 
+Supervisory Control And Data Acquisition 
+SG 
+SI 
+SIL 
+SINE 
+SKAFOR 
+SPS 
+SQL 
+SRA 
+SSA 
+SSAC 
+STES 
+SV 
+SW 
+S34 
+TBM 
+TD 
+TCP  
+Structure Gauge 
+Systeme International d’Unités 
+(The international system of units) 
+Safety Integrity Level 
+SIkkerhedsNEttet 
+(Danish security radio network) 
+Dansk Forening for Skadesforsikring  
+(The Danish Association of Non-life Underwriters) 
+Stairwell Pressurization System 
+Standard query language 
+Safety Regulation Authority (Trafik-, Bygge- og Boligstyrelsen) 
+Station and Shaft Areas  
+Station and Shaft Areas Contractor 
+Station Train Emergency Stop 
+Service Vehicles 
+Scope of Works 
+System 34 
+Tunnel Boring Machine 
+Tender Design 
+Transmission Control Protocol  
+TETRA 
+Terrestrial Trunked Radio 
+TIDS 
+TIS 
+TOR 
+Tunnel Intrusion Detection System 
+Ticketing System 
+Top of Rail 
+CR-CSJV-GEN=GSh-GC-CON-SPE-220402   
+ 
+Version: 3.0 
+ 
+Date: 2017-12-15 
+Page: 11 of 17 
+ 
+Metroselskabet 
+CITYRINGEN BRANCH OFF TO SYDHAVNEN 
+SHG-CB 1.1.A 
+TP 
+TRS 
+TS 
+TSC 
+TSI 
+TÜV  
+TVF 
+TVS 
+Traction Power 
+Transmission System 
+(also used for the trial run start milestone) 
+Transportation System 
+Transportations System Contractor (Ansaldo STS) 
+TSC is also used as an abbreviation for the ASTSs Contract on 
+Cityringen.   
+Technical Specification of Interoperability 
+TÜV Rheinland Sicherheit und Umweltschutz (Independent Safety 
+Assessor) 
+Tunnel Ventilation Fan 
+Tunnel Ventilation System 
+UMTS 
+Universal Mobile Telephone System 
+VO 
+VSP 
+VVP 
+WAN 
+WBS 
+WEA 
+WiFi 
+WS 
+ZOI 
+ 
+Variation Order 
+Vertical Seismic Profile 
+Verification & Validation Plan 
+Wide Area Network 
+Work Breakdown Structure 
+Working Environment Authority (Arbejdsttilsynet AT) 
+Wireless Fidelity (wireless interface of mobile computing devices) 
+Working Schedule  
+Zone of influence is the area affected by the works in terms of 
+displacement. 
+CR-CSJV-GEN=GSh-GC-CON-SPE-220402   
+ 
+Version: 3.0 
+ 
+Date: 2017-12-15 
+Page: 12 of 17 
+ 
+Metroselskabet 
+CITYRINGEN BRANCH OFF TO SYDHAVNEN 
+SHG-CB 1.1.A 
+3 
+Station and Shafts abbreviations 
+Abbreviation 
+Station Name 
+Amh 
+Buv 
+Ehp 
+Ebr 
+Fb 
+Fba 
+Fit 
+Gls 
+Kgn 
+Kh 
+Kk 
+Mmk 
+Mop 
+Nup 
+Nø 
+Nør 
+Php 
+Rhp 
+Skp 
+Slu 
+Tri 
+Vhr 
+Ork 
+Nht 
+Nel 
+ 
+Abbreviation 
+Gåb 
+Nøp 
+Aksel Møllers Have 
+Otto Bussesvej (Staff Platform at CMC 
+area) 
+Enghave Plads 
+At/Enghave Brygge 
+Frederiksberg  
+Frederiksberg Allé 
+At/Fisketorvet 
+Gammel Strand 
+Kongens Nytorv 
+København H 
+Østerport 
+Marmorkirken 
+At/Mozarts Plads 
+Nuuks Plads 
+Nørrebro 
+Nørrebros Runddel 
+Poul Henningsens Plads 
+Rådhuspladsen 
+Skjolds Plads 
+At/Sluseholmen 
+Trianglen 
+Vibenshus Runddel 
+Orientkaj 
+Nordhavn 
+Ny Ellebjerg station 
+Shaft and Cut & Cover Name 
+Gåsebæk 
+Nørrebroparken 
+CR-CSJV-GEN=GSh-GC-CON-SPE-220402   
+ 
+Version: 3.0 
+ 
+Date: 2017-12-15 
+Page: 13 of 17 
+ 
+Metroselskabet 
+CITYRINGEN BRANCH OFF TO SYDHAVNEN 
+SHG-CB 1.1.A 
+Sbv 
+Stk 
+Tgv 
+Øsø 
+Krp 
+Hah 
+Øvk 
+Sønder Boulevard  
+Stubkaj (ramp) 
+Tømmergraven 
+Øster Søgade 
+Krauseparken 
+Havneholmen 
+H C Ørstedsværket 
+Abbreviation 
+Pump Sump Name 
+Teh 
+Tjæ 
+4 
+24/7 
+ASTS 
+Teglholmsgade 
+Tjæregade 
+Definitions 
+24 hours a day, 7 days a week 
+Ansaldo STS, the TS contractor on Cityringen responsible for all TS 
+supply on Cityringen as well as operation and maintenance of the 
+entire Cityringen System  
+Asset 
+management 
+Registration and access to overview of all assets with all relevant 
+asset data 
+ATP work zone 
+(or just work 
+zone) 
+Part of the line where ATP controlled movement is not permitted.  
+The work zone may be bigger than the corresponding work area. 
+Work zone limits always correspond to the 3rd rail power 
+sectioning. 
+Bifurcation 
+The term covers three locations: 
+The branching from Cityringen towards CMC and Sydhavnen at 
+Sbv. Track 1 (upper track) connects to Track 12 and Track 2 (lower 
+track) connects to Track 11. 
+The branching from CMC branch to Sydhavnen at Hah. Track 11 
+(lower track) connects to Track 41 and track 12 (upper track) 
+connects to track 42. 
+The branching from Cityringen towards Nordhavnen at Øsø. Track 
+1 connects to track 61 and Track 2 connects to Track 62. 
+Cable Way 
+Space dedicated for the passage of cables  
+CMT 
+Copenhagen Metro Team, the CW contractor on Cityringen 
+responsible for all civil works on Cityringen 
+CR-CSJV-GEN=GSh-GC-CON-SPE-220402   
+ 
+Version: 3.0 
+ 
+Date: 2017-12-15 
+Page: 14 of 17 
+ 
+Metroselskabet 
+CITYRINGEN BRANCH OFF TO SYDHAVNEN 
+SHG-CB 1.1.A 
+Contractor 
+The term Contractor refers to any of the Contractors for Cityringen 
+Branch off to Sydhavnen. 
+If the term XX Contractor is used this refers solely to the XX 
+Contractor and not to the remaining Contractors. 
+C-Operation 
+A pinched loop operation between any 2 crossovers on mainline 
+using any of the tracks for turn back. M4 also qualifies as C-
+operation. 
+Door opening 
+time 
+Time from wheels physically stop moving until all doors (vehicle 
+doors and platform doors) are physically fully open. 
+ 
+Door open 
+time 
+Time from all doors (vehicle and platform) are physically fully open 
+until first door (vehicle or platform) physically starts closing. 
+Door closing 
+time 
+Time from first door (vehicle or platform) physically starts closing 
+until wheels physically start moving. 
+Driver: 
+Person responsible for the operation of a train when it is in ATP or 
+Bypass mode.  
+Dwell time 
+Time from wheels physically stop moving on station A to wheels 
+physically start moving on station A. Dwell time is the sum of door 
+opening time, door open time and door closing time. 
+Employer 
+The Employer is Metroselskabet (MS).  
+Headway 
+Main cable 
+support 
+system 
+The time interval between the passing of the front ends of 
+successive vehicles moving along the same track in the same 
+direction 
+Common cable support for three or more cables of the same 
+voltage range following the same route.  
+CR-CSJV-GEN=GSh-GC-CON-SPE-220402   
+ 
+Version: 3.0 
+ 
+Date: 2017-12-15 
+Page: 15 of 17 
+ 
+Metroselskabet 
+CITYRINGEN BRANCH OFF TO SYDHAVNEN 
+SHG-CB 1.1.A 
+Maintenance 
+Manual 
+This manual provides a system overview and a detailed description 
+on maintenance and adjustment of the system. Maintenance 
+activities are in general categorised as preventive (regular or 
+condition based) and corrective (repair and reconditioning). 
+OC  
+Contractor 
+Contractors for the other contracts than CRSH1, CRSH2, CRSH3, 
+CRSH4, TSC, CWC. (Small contracts which the Employer separately 
+will enter into station areas contract, traffic relocations etc. 
+O&M provider 
+The part of the TSC’s organisation which is responsible for 
+Operation and Maintenance after Hand Over Milestone 
+Operation 
+Manual 
+This manual provides a system overview and a detailed description 
+on how the system shall be operated in normal operation and 
+various fallback and emergency scenarios and on the interfaces to 
+other systems. The manual does not describe operation of other 
+systems to which the system is integrated. 
+Project Basis 
+The Project Basis contains the design requirements on which the 
+project shall be based to produce an acceptable design. 
+Project 
+Information 
+Round trip 
+time 
+The Project Information contains additional information collected 
+by the Employer to assist the tenderer to prepare the Tender 
+Design. 
+Time from wheels physically start moving on station x to wheels 
+physically start moving on station x after having performed 1 M3 
+loop or 1 M4 loop. Round trip time is the sum of all run times plus 
+all dwell times for 1 M3 or M4 loop. 
+Run time 
+Trip time from one station to the next. 
+Service 
+Availability 
+Service 
+contract 
+Service 
+Provider 
+Service Availability is a measure of how well the O&M provider 
+delivers the agreed train capacity in an even flow. It is based on 
+actual departure data measured against the agreed public 
+headway schedule 
+The contract entered into by the TSC (ASTS) for the purpose of 
+maintaining parts of Cityringen including the branch off to 
+Sydhavnen. The contracts on CRSH include service contracts on 
+selected systems and components. These will be handed over to 
+the TSC via the Employer. 
+The party to a service contract who delivers service to Cityringen 
+including the Branch off to Sydhavnen is called The Service 
+Provider 
+Technical 
+Specification 
+The Technical Specifications set out the minimum quality 
+requirements for material and workmanship.  
+CR-CSJV-GEN=GSh-GC-CON-SPE-220402   
+ 
+Version: 3.0 
+ 
+Date: 2017-12-15 
+Page: 16 of 17 
+ 
+Metroselskabet 
+CITYRINGEN BRANCH OFF TO SYDHAVNEN 
+SHG-CB 1.1.A 
+The Works 
+The design, supply, construction, inspection, testing, 
+commissioning, setting to work and maintenance until handover to 
+the Employer of the whole of the works comprising this Contract 
+TILOS 
+A proprietary project management and planning software      
+Train 
+Dispatcher 
+Member of O&M staff responsible for the operational aspects of 
+the ATC and PSDS systems, covering revenue and CMC aspects 
+Overall description of training activities related to a specific topic. 
+Time from wheels physically start moving on station A to wheels 
+physically stop moving on station B. 
+ 
+Training 
+manual 
+Trip time 
+ 
+ 
+CR-CSJV-GEN=GSh-GC-CON-SPE-220402   
+ 
+Version: 3.0 
+ 
+Date: 2017-12-15 
+Page: 17 of 17 

@@ -1,0 +1,44 @@
+{% extends 'cadFiles/layout.html' %}
+{% load static %}
+{% load render_table from django_tables2 %}
+
+{% block body %}
+
+<div class="container-fluid">
+    <div class="container">
+        {% if pdfText %}
+            <h5 class="center-align teal lighten-3" > TEXT FROM PDF FILE </h5>
+            <div class="row" id="card_scroll_img" contenteditable="true">
+                <div><pre>{{pdfText}}</pre></div>
+            </div>
+        {% elif dxfText %}
+            <h5 class="center-align teal lighten-3" > TEXT FROM DXF FILE </h5>
+            <div class="row" id="card_scroll_img" contenteditable="true">
+                <div><pre>{{dxfText}}</pre></div>
+            </div>
+        {% elif tableX %}
+            <h5 class="center-align teal lighten-3" > LWPOLYLINE VERTICES FROM DXF FILE </h5>
+            <div class="row" id="card_scroll_img" contenteditable="true">
+                    <div class="col s12">
+                        <div class="col s6" >
+                            <h5 class="center">X</h5>
+                            {% for x in tableX %}
+                            <div>{{x}}</div>    
+                            {% endfor %}
+                        </div>
+                        <div class="col s6">
+                            <h5 class="center">Y</h5>
+                            {% for y in tableY %}
+                            <div>{{y}}</div>    
+                            {% endfor %}
+                        </div>
+                    </div>
+               
+            </div>
+            
+
+        {% endif %}
+        <a href="/files" class="btn">Go Back</a>
+    </div>
+</div>
+{% endblock %}

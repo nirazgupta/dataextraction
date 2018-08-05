@@ -1,0 +1,17 @@
+{% extends 'cadFiles/layout.html' %}
+{% load static %}
+
+
+{% block body %}
+
+<div class="container-fluid">
+    <div class="container">
+        <h5 class="center-align teal lighten-3" > IMAGES FROM PDF FILE </h5>
+
+        <div class="row" id="card_scroll_img" contenteditable="true">
+                <div>{{csv}}</div>>
+        </div>
+        <a href="/files" class="btn">Go Back</a>
+    </div>
+</div>
+{% endblock %}
