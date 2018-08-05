@@ -79,21 +79,20 @@ WSGI_APPLICATION = 'dataExtraction.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/2.0/ref/settings/#databases
 
-<<<<<<< HEAD
+
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.sqlite3',
         'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
     }
 }
-=======
+
 # DATABASES = {
 #     'default': {
 #         'ENGINE': 'django.db.backends.sqlite3',
 #         'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
 #     }
 # }
->>>>>>> 3c254e12788e53c1a6759984b64d769839cd8406
 
 # DATABASES = {
 #     'default': {
@@ -109,7 +108,7 @@ DATABASES = {
 #     }
 # }
 
-<<<<<<< HEAD
+
 # DATABASES = {
 #     'default': {
 #         'ENGINE': 'django.db.backends.mysql',
@@ -121,19 +120,19 @@ DATABASES = {
 
 #     }
 # }
-=======
-DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.mysql',
-        'NAME': 'dfomshs682okj',
-        'USER': 'djbaprdpmyctbl',
-        'PASSWORD': '3b3bc01ec206d23ef82214be99ee6055a21e069d66a887ab6f4e8581589a9cf6',
-        'HOST': 'ec2-50-17-250-38.compute-1.amazonaws.com',
-        'PORT': '5432'
 
-    }
-}
->>>>>>> 3c254e12788e53c1a6759984b64d769839cd8406
+# DATABASES = {
+#     'default': {
+#         'ENGINE': 'django.db.backends.mysql',
+#         'NAME': 'dfomshs682okj',
+#         'USER': 'djbaprdpmyctbl',
+#         'PASSWORD': '3b3bc01ec206d23ef82214be99ee6055a21e069d66a887ab6f4e8581589a9cf6',
+#         'HOST': 'ec2-50-17-250-38.compute-1.amazonaws.com',
+#         'PORT': '5432'
+
+#     }
+# }
+
 
 db_from_env = dj_database_url.config(conn_max_age=500)
 DATABASES['default'].update(db_from_env)
