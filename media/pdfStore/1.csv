@@ -1,0 +1,203 @@
+,Cityringen Branch off to Sydhavnen,
+,SHG-AB-SB 1,
+,CRSH1 Contract Milestone List,
+Document ID:,CR-CSJV-GEN=GSh-GC-CON-SPE-220331,
+"Version:
+Issue date:
+Issued By","4.0
+2017-04-27
+COWI SYSTRA Joint Venture",
+Employers,MKJ,Mikkel Kjær Jensen
+Approval:,,
+Approved by:,CBO,Christian Boye
+Checked by:,SDE,Søren Degn Eskesen
+Prepared by:,CBO,Christian Boye
+
+SHG-AB-SB 1 - CRSH1 Contract Milestone List,,,,,,,,,,,,,,,,,,,,,
+"Milestone
+Abbreviation",Title,"Responsible
+Party","Receiving
+Party","CRSH1
+Payment
+Milestones
+Ref, SH1-FT","CRSH1
+Penalty
+Milestone
+EUR/day","Reference to
+section in
+SHG-CB 4.2","Non-location
+specific or
+Common
+for several
+Milestones","Shaft
+Hah","Tunnel
+Hah - Fit","Station
+Fit","Tunnel
+Fit-Øvk","Cross-over
+Øvk","Station
+Ebr","Tunnel
+Ebr - Slu","Station
+Slu","Tunnel
+Slu - Mop","Station
+Mop","Tunnel
+Mop - Gåb","Cross-over
+Gåb","Tunnel
+Gåb - Nel","Station and
+stop tracks
+Nel"
+Contract Verification Phase,,,,,,,Date,Date,Date,Date,Date,Date,Date,Date,Date,Date,Date,Date,Date,Date,Date
+CA,Contract Award,Employer,-,,,9.1,2017-08-01,,,,,,,,,,,,,,
+VOC,Verification of Contract,"CRSH1, 4 and TSC",-,,,9.2,2017-11-01,,,,,,,,,,,,,,
+Design Phase,,,,,,,,,,,,,,,,,,,,,
+IAP,Interface Agreement Planning,"CRSH1, 4 and TSC",-,,10.000,9.3,2018-02-01,,,,,,,,,,,,,,
+SGDI-CRSH1#1,"Starting ""Geometrical Design Input"" exchange, CRSH1 Underground Stations",CRSH1,CRSH4 and TSC,1%,5.000,9.4,2018-04-03,,,,,,,,,,,,,,
+SGDI-CRSH1#2,"Starting ""Geometrical Design Input"" exchange, CRSH1 Rest",CRSH1,CRSH4 and TSC,1%,5.000,9.4,2018-04-03,,,,,,,,,,,,,,
+GDI-CRSH1#1,Geometrical Design Input to CRSH1 Underground Stations,CRSH4 and TSC,CRSH1,,,9.5,2018-10-01,,,,,,,,,,,,,,
+GDI-CRSH1#2,Geometrical Design Input to CRSH1 Rest,CRSH4 and TSC,CRSH1,,,9.5,2018-10-01,,,,,,,,,,,,,,
+PD-CRSH4-PW,"Preliminary Design, Permanent Way",CRSH4,Employer,,,9.6,,,,,,,,,,,,,,,
+PD-CRSH4-PS,"Preliminary Design, Power Supply",CRSH4,Employer,,,9.6,,,,,,,,,,,,,,,
+PD-CRSH4-TP,"Preliminary Design, Traction Power",CRSH4,Employer,,,9.6,,,,,,,,,,,,,,,
+PD-CRSH4-LS,"Preliminary Design, Local SCADA",CRSH4,Employer,,,9.6,,,,,,,,,,,,,,,
+DD-CRSH1-SP,"Detailed Design, Secant Piles, Ebr+Øvk",CRSH1,Employer,1%,,9.7,,,,,,,,,,,,,,,
+DD-CRSH1-TS,"Detailed Design, Tunnel Segments",CRSH1,Employer,1%,,9.7,,,,,,,,,,,,,,,
+DD-CRSH1-ARC,"Detailed Design, Architecture, CRSH1 1st station",CRSH1,Employer,1%,,9.7,,,,,,,,,,,,,,,
+DD-CRSH4-PW,"Detailed Design, Permanent Way",CRSH4,Employer,,,9.7,,,,,,,,,,,,,,,
+DD-CRSH4-PS,"Detailed Design, Power Supply",CRSH4,Employer,,,9.7,,,,,,,,,,,,,,,
+DD-CRSH4-TP,"Detailed Design, Traction Power",CRSH4,Employer,,,9.7,,,,,,,,,,,,,,,
+DD-CRSH4-LS,"Detailed Design, Local SCADA",CRSH4,Employer,,,9.7,,,,,,,,,,,,,,,
+MU-CRSH1,"Mock-up Approval, CRSH1",CRSH1,Employer,2%,,A.2,,,,,,,,,,,,,,,
+SLDD,System Level Detailed Design,TSC,Employer,,,9.9,,,,,,,,,,,,,,,
+OMC,Operation and Maintenance Concept,TSC,Employer,,,9.10,,,,,,,,,,,,,,,
+OMPD,Operation and Maintenance Preliminary Design,TSC,Employer,,,9.11,,,,,,,,,,,,,,,
+OMDD,Operation and Maintenance Detailed Design,TSC,Employer,,,9.12,,,,,,,,,,,,,,,
+Construction Phase,,,,,,,,,,,,,,,,,,,,,
+AS,Access to Site,Employer,CRSH1,,,9.13,,2018-09-14,,2018-03-01,,,2017-11-30,,2018-01-31,,2018-03-01,,2018-05-04,,2018-12-03
+ASEbr1,Access to Enghave Brygge Site area #1,Employer,CRSH1,,,A.3,,,,,,,2017-11-30,,,,,,,,
+ASEbr2,Access to Enghave Brygge Site area #2,Employer,CRSH1,,,A.4,,,,,,,2019-03-01,,,,,,,,
+TBMFAC1,TBM #1 Factory assembly and commissioning,CRSH1,Employer,,,A.5,,,,,,,,,,,,,,,
+TBMFAC2,TBM #2 Factory assembly and commissioning,CRSH1,Employer,,,A.6,,,,,,,,,,,,,,,
+TBML,TBM #1 Launch,CRSH1,Employer,3%,5.000,A.7,,,,,,,,,,,,,,,
+TBM-REC-Hah,TBM #1 Reception at Havneholmen,CRSH1,Employer,3%,20.000,A.8,,,,,,,,,,,,,,,
+TBM-REC-Nel,TBM #2 Reception at Ny Ellebjerg,CRSH1,Employer,3%,20.000,A.9,,,,,,,,,,,,,,,
+ASNel1,Access to Ny Ellebjerg Site area #1,Employer,CRSH1,,,A.10,,,,,,,,,,,,,,,2018-12-03
+ASNel2,Access to Ny Ellebjerg Site area #2,Employer,CRSH1,,,A.11,,,,,,,,,,,,,,,2019-03-04
+ASGåb1,Access to Gåsebæk Shaft Site area #1,Employer,CRSH1,,,A.12,,,,,,,,,,,,,2018-05-04,,
+ASGåb2,Access to Gåsebæk Shaft Site area #2,Employer,CRSH1,,,A.13,,,,,,,,,,,,,2019-03-14,,
+Legend:,Milestone Dates provided by Employer,,,,,,,,,,,,,,,,,,,,
+,Milestone Dates to be provided by the Responsible Party,,,,,,,,,,,,,,,,,,,,
+,Latest changes to milestone dates (Post Addendum 2),,,,,,,,,,,,,,,,,,,,
+CR-CSJV-GEN=GSh-GC-CON-SPE-220331 4.0 Master Page 2 of 3,,,,,,,,,,,,,,,,,,,,,
+
+SHG-AB-SB 1 - CRSH1 Contract Milestone List,,,,,,,,,,,,,,,,,,,,,
+"Milestone
+Abbreviation",Title,"Responsible
+Party","Receiving
+Party","CRSH1
+Payment
+Milestones
+Ref, SH1-FT","CRSH1
+Penalty
+Milestone
+EUR/day","Reference to
+section in
+SHG-CB 4.2","Non-location
+specific or
+Common
+for several
+Milestones","Shaft
+Hah","Tunnel
+Hah - Fit","Station
+Fit","Tunnel
+Fit-Øvk","Cross-over
+Øvk","Station
+Ebr","Tunnel
+Ebr - Slu","Station
+Slu","Tunnel
+Slu - Mop","Station
+Mop","Tunnel
+Mop - Gåb","Cross-over
+Gåb","Tunnel
+Gåb - Nel","Station and
+stop tracks
+Nel"
+,,,,,,,Date,Date,Date,Date,Date,Date,Date,Date,Date,Date,Date,Date,Date,Date,Date
+RASA-CRSH4,Ready for CRSH4 Access to Surface Site Area,CRSH1,Employer,,,9.14,,,,2021-12-23,,,2021-09-21,,2021-08-31,,2021-10-04,,2021-05-19,,2022-06-21
+ASA-CRSH4,CRSH4 Access to Surface Site Area,Employer,CRSH4,,,9.15,,,,2022-01-06,,,2021-10-05,,2021-09-14,,2021-10-18,,2021-06-02,,2022-07-05
+RASA-TSC,Ready for TSC Access to Surface Site Area,CRSH1,Employer,,,9.14,,,,2022-02-08,,,2021-11-05,,2021-10-14,,2021-10-14,,2021-07-02,,2022-07-21
+ASA-TSC,TSC Access to Surface Site Area,Employer,TSC,,,9.15,,,,2022-02-22,,,2021-11-19,,2021-10-28,,2021-10-28,,2021-07-16,,2022-08-04
+RASCL,Ready for TSC Access to Concourse Level,CRSH1,Employer,,,9.16,,,,2022-04-04,,,2022-01-26,,2022-01-06,,2021-11-15,,,,2022-08-18
+ASCL,TSC Access to Concourse Level,Employer,TSC,,,9.26,,,,2022-04-19,,,2022-02-09,,2022-01-20,,2021-11-29,,,,2022-09-01
+RASPL#1,Ready for TSC Access to Platform Level,CRSH1,Employer,,5.000,9.17,,,,2022-03-10,,,2021-12-07,,2022-01-24,,2022-02-07,,,,2022-12-12
+ASPL#1,TSC Access to Platform Level,Employer,TSC,,,9.26,,,,2022-03-24,,,2021-12-21,,2022-02-07,,2022-02-21,,,,2022-12-26
+RASPL#2,Ready for CRSH1 Access to Platform Level,TSC,Employer,,,9.18,,,,2022-06-24,,,2022-03-23,,2022-05-10,,2022-05-24,,,,2023-03-14
+ASPL#2,CRSH1 Access to Platform Level,Employer,CRSH1,,,9.26,,,,2022-07-08,,,2022-04-06,,2022-05-24,,2022-06-07,,,,2023-03-28
+RASBPL#1,Ready for CRSH4 Access to Below Platform Level,CRSH1,Employer,,5.000,9.19,,,,2022-02-23,,,2022-03-14,,2022-01-24,,2022-06-06,,,,2022-08-05
+ASBPL#1,CRSH4 Access to Below Platform Level,Employer,CRSH4,,,9.26,,,,2022-03-09,,,2022-03-28,,2022-02-07,,2022-06-20,,,,2022-08-19
+RASBPL#2,Ready for TSC Access to Below Platform Level,CRSH4,Employer,,,9.20,,,,2022-04-06,,,2022-04-25,,2022-03-07,,2022-07-18,,,,2022-09-16
+ASBPL#2,TSC Access to Below Platform Level,Employer,TSC,,,9.26,,,,2022-04-20,,,2022-05-09,,2022-03-21,,2022-08-01,,,,2022-09-30
+RASTR#1,Ready for CRSH4 Access to Technical Rooms,CRSH1,Employer,,5.000,9.21,,,,2022-01-25,,2022-01-11,2021-10-22,,2021-09-30,,2021-11-03,,2021-06-18,,2022-07-21
+ASTR#1,CRSH4 Access to Technical Rooms,Employer,CRSH4,,,9.26,,,,2022-02-08,,2022-01-25,2021-11-05,,2021-10-14,,2021-11-17,,2021-07-02,,2022-08-04
+RASTR#2,Ready for TSC Access to Technical Rooms,CRSH4,Employer,,,9.22,,,,2022-03-10,,,2021-12-07,,2021-11-15,,2021-12-17,,2021-08-03,,2022-09-06
+ASTR#2,TSC Access to Technical Rooms,Employer,TSC,,,9.26,,,,2022-03-24,,,2021-12-21,,2021-11-29,,2021-12-31,,2021-08-17,,2022-09-20
+RASTB#1A,Ready for CRSH4 Access to Track Bed,CRSH1,Employer,2% (Gåb-Nel),10.000,9.23,,,2021-07-28,,2021-07-28,,,2022-03-29,,2022-04-26,,2022-03-21,,2022-06-10,
+ASTB#1A,CRSH4 Access to Track Bed,Employer,CRSH4,,,9.26,,,2021-08-11,,2021-08-11,,,2022-04-12,,2022-05-10,,2022-04-04,,2022-06-24,
+RASTB#2A,Ready for CRSH1 Access to Track Bed,CRSH4,Employer,,,9.24,,,2022-01-31,,2022-01-31,,,2022-07-01,,2022-07-19,,2022-07-19,,2022-08-31,
+ASTB#2A,CRSH1 Access to Track Bed,Employer,CRSH1,,,9.26,,,2022-02-14,,2022-02-14,,,2022-07-15,,2022-08-02,,2022-08-02,,2022-09-14,
+RASTB#3A,Ready for TSC Access to Track Bed,CRSH1,Employer,,5.000,9.25,,,2022-03-11,,2022-03-11,,,2022-08-26,,2022-09-28,,2022-09-28,,2022-10-13,
+ASTB#3A,TSC Access to Track Bed,Employer,TSC,,,9.26,,,2022-03-25,,2022-03-25,,,2022-09-09,,2022-10-12,,2022-10-12,,2022-10-27,
+RASTB#1B,Ready for CRSH4 Access to Track Bed,CRSH1,Employer,,10.000,9.23,,,2021-07-28,,2021-07-28,,,2022-06-14,,2022-07-12,,2022-06-06,,2022-07-21,
+ASTB#1B,CRSH4 Access to Track Bed,Employer,CRSH4,,,9.26,,,2021-08-11,,2021-08-11,,,2022-06-28,,2022-07-26,,2022-06-20,,2022-08-04,
+RASTB#2B,Ready for CRSH1 Access to Track Bed,CRSH4,Employer,,,9.24,,,2022-04-27,,2022-04-27,,,2022-09-16,,2022-10-03,,2022-10-03,,2022-10-10,
+ASTB#2B,CRSH1 Access to Track Bed,Employer,CRSH1,,,9.26,,,2022-05-11,,2022-05-11,,,2022-09-30,,2022-10-13,,2022-10-13,,2022-10-24,
+RASTB#3B,Ready for TSC Access to Track Bed,CRSH1,Employer,,5.000,9.25,,,2022-06-16,,2022-06-16,,,2022-11-14,,2022-12-08,,2022-12-08,,2022-11-21,
+ASTB#3B,TSC Access to Track Bed,Employer,TSC,,,9.26,,,2022-06-30,,2022-06-30,,,2022-11-28,,2022-12-20,,2022-12-20,,2022-12-05,
+POS-Fit,"Power on Station, Fisketorvet",CRSH4,CRSH1 and TSC,,,9.27,,,,2022-07-12,,,,,,,,,,,
+POS-Ebr,"Power on Station, Enghave Brygge",CRSH4,CRSH1 and TSC,,,9.27,,,,,,,2022-07-19,,,,,,,,
+POS-Slu,"Power on Station, Sluseholmen",CRSH4,CRSH1 and TSC,,,9.27,,,,,,,,,2022-07-26,,,,,,
+POS-Mop,"Power on Station, Mozarts Plads",CRSH4,CRSH1 and TSC,,,9.27,,,,,,,,,,,2022-08-10,,,,
+POS-Gåb,"Power on Station, Gåsebæk",CRSH4,CRSH1 and TSC,,,9.27,,,,,,,,,,,,,2022-08-17,,
+POS-Nel,"Power on Station, Ny Ellebjerg",CRSH4,CRSH1 and TSC,,,9.27,,,,,,,,,,,,,,,2023-01-09
+SC,Substantial Completion,"CRSH1, 4 and TSC",Employer,,50.000,9.28,2023-07-03,,,,,,,,,,,,,,
+SLSC,System Level Substantial Completion,TSC,Employer,,,9.29,2023-11-02,,,,,,,,,,,,,,
+PDSFit,Partial Demobilisation of Site,CRSH1,Employer,,,9.30 and A.14,,,,2022-04-21,,,,,,,,,,,
+RASA-CRSH4-TL-Ebr,Ready for CRSH4 Access to Surface Site Area for Track Laying,CRSH1,Employer,,,9.14 and A.15,,,,,,,2021-07-28,,,,,,,,
+ASA-CRSH4-TL-Ebr,CRSH4 Access to Surface Site Area for Track Laying,Employer,CRSH4,,,9.15 and A.16,,,,,,,2021-08-11,,,,,,,,
+LSA-CRSH4-TL-Ebr,CRSH4 Leaving Surface Site Area at Track Laying Completion,CRSH4,CRSH1,,,A.17,,,,,,,2022-09-22,,,,,,,,
+PDSEbr,Partial Demobilisation of Site,CRSH1,Employer,,,9.30 and A.18,,,,,,,2022-08-10,,,,,,,,
+PDSSlu,Partial Demobilisation of Site,CRSH1,Employer,,,9.30 and A.19,,,,,,,,,2022-02-23,,,,,,
+RASA-CRSH4-TL-Gåb,Ready for CRSH4 Access to Surface Site Area for Track Laying,CRSH1,Employer,,,9.14 and A.20,,,,,,,,,,,,,2022-01-07,,
+ASA-CRSH4-TL-Gåb,CRSH4 Access to Surface Site Area for Track Laying,Employer,CRSH4,,,9.15 and A.21,,,,,,,,,,,,,2022-01-21,,
+LSA-CRSH4-TL-Gåb,CRSH4 Leaving Surface Site Area at Track Laying Completion,CRSH4,CRSH1,,,A.22,,,,,,,,,,,,,2022-11-28,,
+PDSNel1,Partial Demobilisation of Site #1,CRSH1,Employer,,,9.30 and A.23,,,,,,,,,,,,,,,2022-09-30
+DS,Demobilisation of Site,"CRSH1, 4 and TSC",Employer,,5.000,9.31,,2021-08-06,,2022-12-09,,,2023-02-27,,2022-10-17,,2023-01-09,,2023-03-21,,2023-05-02
+SUP-AB,Physical Supply As-Built Documentation,"CRSH1, 4 and TSC",Employer,2%,,9.32,,,,,,,,,,,,,,,
+MOB-AB,Mobilisation As-Built Documentation,TSC,Employer,,,9.33,,,,,,,,,,,,,,,
+RHO,Ready for Hand Over,"CRSH1, 4 and TSC",Employer,,,9.34,2023-11-03,,,,,,,,,,,,,,
+HO,Hand Over,"CRSH1, 4 and TSC",Employer,,,9.35,2023-11-06,,,,,,,,,,,,,,
+"Construction Phase, Fit Option",,,,,,,,,,,,,,,,,,,,,
+ASFitO1,"Access to Fit Site area, Option 1",Employer,CRSH1,,,A.24,,,,2018-03-01,,,,,,,,,,,
+ASFitO2,"Access to Fit Site area, Option 2",Employer,CRSH1,,,A.25,,,,2018-03-01,,,,,,,,,,,
+PDSFitO1,"Partial Demobilisation of Site, Option 1",CRSH1,Fit Mall Con,,,9.30 and A.26,,,,2022-04-21,,,,,,,,,,,
+PDSFitO2,"Partial Demobilisation of Site, Option 2",CRSH1,Fit Mall Con,,,9.30 and A.27,,,,2022-04-21,,,,,,,,,,,
+Trial Run Phase,,,,,,,,,,,,,,,,,,,,,
+TO,Take Over,TSC,-,,,9.36,2023-11-06,,,,,,,,,,,,,,
+TRS,Trial Running Starts,TSC,-,,,9.37,2023-11-06,,,,,,,,,,,,,,
+TRC,Trial Running Completed,TSC,-,,,9.38,2023-12-15,,,,,,,,,,,,,,
+Revenue Operation Phase,,,,,,,,,,,,,,,,,,,,,
+MRO,Metro Ready for Operation,TSC,Employer,,,9.39,2023-12-15,,,,,,,,,,,,,,
+HB,Hand Back of Cityringen including branch off to Nordhavnen and Sydhavnen,TSC,Employer,,,9.40,,,,,,,,,,,,,,,
+Contractor Safety Milestones,,,,,,,,,,,,,,,,,,,,,
+DA,"Design Approval (""Projekteringsgodkendelse"")","CRSH1, 4 and TSC",Employer,,,9.41,,,,,,,,,,,,,,,
+ARS,"Acceptance of Rolling Stock (""Køretøjstilladelse"")",TSC,Employer,,,9.42,,,,,,,,,,,,,,,
+SA,"System Acceptance (""Anlægsgodkendelse"")","CRSH1, 4 and TSC",Employer,,10.000,9.43,,,,,,,,,,,,,,,
+SLDA,"System Level Detailed Design Approval (""Projekteringsgodkendelse"")",TSC,Employer,,,9.44,,,,,,,,,,,,,,,
+AOP,Approval of Operator Procedures and Organisation,TSC,Employer,,,9.45,,,,,,,,,,,,,,,
+AOT,Approval of Operator Staff Training,TSC,Employer,,,9.46,,,,,,,,,,,,,,,
+IAS,"Installation Acceptance of Section (""Anlægsgodkendelse"")",TSC,Employer,,,9.47,,,,,,,,,,,,,,,
+POC,"Preliminary Operator Certificate (""Foreløbig Driftstilladelse"")",TSC,Employer,,,9.48,,,,,,,,,,,,,,,
+OC,Operator Certificate,TSC,Employer,,,9.49,,,,,,,,,,,,,,,
+TRP,Test Running Permission,Employer,TSC,,,9.50,,,,,,,,,,,,,,,
+Legend:,Milestone Dates provided by Employer,,,,,,,,,,,,,,,,,,,,
+,Milestone Dates to be provided by the Responsible Party,,,,,,,,,,,,,,,,,,,,
+,Latest changes to milestone dates (Post Addendum 2),,,,,,,,,,,,,,,,,,,,
+CR-CSJV-GEN=GSh-GC-CON-SPE-220331,4.0,Master,,,,,,,,,,,,,,Page 3 of 3,,,,,

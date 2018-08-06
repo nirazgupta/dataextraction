@@ -6,13 +6,19 @@ from django.core.files.uploadedfile import *
 from django.views.generic import TemplateView
 from django.core.files.storage import FileSystemStorage
 from django.contrib import messages 
-from extractionTools.pdfTextExtractor2 import extract_text, savePdfText, extractImage, extractDxfEntities
+from extractionTools.pdfTextExtractor2 import extract_text, savePdfText, extractImage, extractDxfEntities, pdfToTable
 from django.core.files.storage import default_storage
 import os, csv
 from dataExtraction.settings import MEDIA_ROOT
 from django.http import FileResponse, Http404
-from cadFiles.models import Document, PdfText, PdfImage, DxfDocument, DxfCsvDocument, DxfTextDocument
+from cadFiles.models import Document, PdfText, PdfImage, DxfDocument, DxfCsvDocument, DxfTextDocument, PdfCsv
 from django.urls import reverse
+import pandas as pd
+from django_tables2.tables import Table
+from tabulate import tabulate
+import pyexcel as p
+import django_excel as excel
+
 
 
 
@@ -31,13 +37,6 @@ def file_add(request):
             if myfile.name.endswith('.pdf'):
                 doc = Document(document=myfile)
                 doc.save()
-                # fs = FileSystemStorage()
-                # filename = fs.save(myfile.name, myfile)
-                # uploaded_file_url = fs.url(filename)
-                # textData = savePdfText(myfile)
-                # extractImage(myfile)
-                # this_file_path = MEDIA_ROOT + "\\" + myfile.name
-                # print(this_file_path)
                 return HttpResponseRedirect(reverse('files'))
 
         if doc_type == 'dxf':
@@ -46,8 +45,6 @@ def file_add(request):
             if myfile.name.endswith('.dxf'):
                 doc = DxfDocument(document=myfile)
                 doc.save()
-                # fs = FileSystemStorage()
-                # filename = fs.save(myfile.name, myfile)
                 return HttpResponseRedirect(reverse('files'))
         else:
             messages.error(request, 'It is not a text file.')
@@ -132,8 +129,9 @@ def details(request, id):
 
 def pdfExtract(request, id):
     doc = Document.objects.get(id=id)
-    extText = savePdfText(doc.document, docid=id)
-    extImage = extractImage(doc.document, docid=id)
+    savePdfText(doc.document, docid=id)
+    extractImage(doc.document, docid=id)
+    pdfToTable(doc.document, docid=id)
 
     pdfdoc = Document.objects.all()[:10]
     dxfdoc = DxfDocument.objects.all()[:10]
@@ -161,9 +159,17 @@ def viewPdfText(request, id):
     }
     return render(request, 'cadFiles/viewPdfText.html', context)
 
+def viewPdfCsv(request, id):
+    doc = PdfCsv.objects.get(csvDoc_id=id)
+    path = doc.csvFile.path
+    f = open(path, 'r')
+    sheet = excel.pe.Sheet(path)
+    
+    return excel.make_response(sheet, "csv")
+
 def dxfExtract(request, id):
     doc = DxfDocument.objects.get(id=id)
-    extDxfData = extractDxfEntities(doc.document, docid=id)
+    extractDxfEntities(doc.document, docid=id)
 
     pdfdoc = Document.objects.all()[:10]
     dxfdoc = DxfDocument.objects.all()[:10]
@@ -174,9 +180,6 @@ def dxfExtract(request, id):
     }
     return render(request, 'cadFiles/index.html', context)
 
-import pandas as pd
-from django_tables2.tables import Table
-from tabulate import tabulate
 
 def showText(request, id):
     doc = DxfTextDocument.objects.get(dxfText_id=id)
@@ -191,19 +194,9 @@ def showText(request, id):
     return render(request, 'cadFiles/viewPdfText.html', context)
 
 def showCsv(request, id):
-
     csvDoc = DxfCsvDocument.objects.get(dxfCsv_id = id)
     data = pd.read_csv(csvDoc.dxfCsvName.path)
-
-    f = open(csvDoc.dxfCsvName.path, 'r')
-    reader = csv.DictReader(f)
-
-    # data = [r for r in reader1]
-
     df_table = data.to_dict(orient='dict')
-    print(type(df_table))
-    for row in df_table:
-        print(df_table.get('X'))
 
     context = {
     'tableX': df_table.get('X').values,

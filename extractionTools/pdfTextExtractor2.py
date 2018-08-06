@@ -14,7 +14,7 @@ import sys, time, re
 import PyPDF2
 import requests 
 from django.http import HttpResponse
-from cadFiles.models import PdfText, PdfImage, DxfDocument, DxfCsvDocument, DxfTextDocument
+from cadFiles.models import PdfText, PdfImage, DxfDocument, DxfCsvDocument, DxfTextDocument, PdfCsv
 from os.path import join
 from django.conf import settings
 from django.core.files import File
@@ -81,6 +81,8 @@ def extractImage(myfile, docid):
     imgcount = 0
     lenXREF = doc._getXrefLength()         # number of objects - do not use entry 0!
 
+    checkPdfImage = PdfImage.objects.all()
+
     for i in range(1, lenXREF):            # scan through all objects
         text = doc._getObjectString(i)     # string defining the object
         isXObject = re.search(checkXO, text)    # tests for XObject
@@ -93,26 +95,25 @@ def extractImage(myfile, docid):
             pix.writePNG(dest_file + "img-%s.png" % (i,))    
             path = join(MEDIA_ROOT, 'imageStore',  "img-%s.png" % (i,))
 
-            file = PdfImage()
-            file.pdfDoc_id = docid
-            file.imageFile = path 
-            file.save()
+            if path not in [i.imageFile for i in checkPdfImage]:
+                file = PdfImage()
+                file.pdfDoc_id = docid
+                file.imageFile = path 
+                file.save()
         else:                              # must convert the CMYK first
             pix0 = fitz.Pixmap(fitz.csRGB, pix)
             pix0.writePNG("img-%s.png" % (i,))
-
             path = join(MEDIA_ROOT, 'imageStore',  "img-%s.png" % (i,))
-
-            file = PdfImage()
-            file.pdfDoc_id = docid
-            file.imageFile = path 
-            file.save()
-            pix0 = None  
+            if path not in [i.imageFile for i in checkPdfImage]:
+                file = PdfImage()
+                file.pdfDoc_id = docid
+                file.imageFile = path 
+                file.save()
+                pix0 = None  
         pix = None                         # free Pixmap resources
             
 # writes the extracted text to a text file and returns content to the view.
 def savePdfText(doc, docid):
-
     content = extract_text(doc)
     split = os.path.splitext(doc.name)
     fname =  split[0] + '.txt'
@@ -124,29 +125,45 @@ def savePdfText(doc, docid):
     #wipe the existing content
     f.truncate()
     f.write(content)
-    # f.close()
+    f.close()
     f = File(f)
-    # filename = os.path.basename(path)
-    file = PdfText()
-    file.pdfDoc_id = docid
-    file.textFile = path
-    file.save()
+
+    # Check existing file in pdfText table
+    chkPdfText = PdfText.objects.all()
+    if path not in [i.textFile for i in chkPdfText]:
+        file = PdfText()
+        file.pdfDoc_id = docid
+        file.textFile = path
+        file.save()
     return content
 
-# def pdfToTable(myfile):
-#     this_file_path = MEDIA_ROOT + "/" + myfile.name
-#     fileData = (this_file_path, open(this_file_path, 'rb')) #"rb" stands for "read bytes"
-#     files = {'f': fileData} 
-#     apiKey = "88sfqs4nmin1" 
-#     fileExt = "csv" #format/file extension of final document
-#     postUrl = "https://pdftables.com/api?key={0}&format={1}".format(apiKey, fileExt)
-#     #the .format puts value of apiKey where {0} is, etc
-#     response = requests.post(postUrl, files=files)
-#     response.raise_for_status() # ensure we notice bad responses
-#     downloadDir = "D:\\autocad\\example1.csv" #directory where you want your file downloaded to 
-#     with open(downloadDir, "wb") as f:
-#         f.write(response.content) #write data to csv
-#     return response.content
+
+# Extract tables from pdf document
+def pdfToTable(doc, docid):
+    split = os.path.splitext(doc.name)
+    fname =  split[0] + '.csv'
+    path = join(MEDIA_ROOT, 'pdfStore', fname)
+
+    fileData = (doc.path, open(doc.path, 'rb')) #"rb" stands for "read bytes"
+    files = {'f': fileData} 
+    apiKey = "88sfqs4nmin1" 
+    fileExt = "csv" #format/file extension of final document
+    postUrl = "https://pdftables.com/api?key={0}&format={1}".format(apiKey, fileExt)
+    #the .format puts value of apiKey where {0} is, etc
+    response = requests.post(postUrl, files=files)
+    response.raise_for_status() # ensure we notice bad responses
+    downloadDir = path #directory where you want your file downloaded to 
+    with open(downloadDir, "wb") as f:
+        f.write(response.content) #write data to csv
+
+    chkCsv = PdfCsv.objects.all()
+
+    if path not in [i.csvFile for i in chkCsv]:
+        saveTodb = PdfCsv()
+        saveTodb.csvDoc_id = docid
+        saveTodb.csvFile = path
+        saveTodb.save()
+    return response.content
 
 
 # Extracts data points and text from the dxf file.
@@ -156,14 +173,11 @@ def extractDxfEntities(doc, docid):
         "assure_3d_coords": False,
         "resolve_text_styles": True,
     }
-    print(doc.name)
     split = os.path.splitext(doc.name)
 
     fnameCsv =  split[0] + '.csv'
     fnameTxt=  split[0] + '.txt'
-    print(fnameCsv)
-    # fp = doc.open(mode='rb')
-    # print(type(fp))
+
     dxf = dxfgrabber.readfile(doc.path, DEFAULT_OPTIONS)
    
     dxfVesion  = "DXF version: {}".format(dxf.dxfversion) 
@@ -197,6 +211,7 @@ def extractDxfEntities(doc, docid):
             f2.write("%s\n" % item)
     
     
+    
     dxfTextObj = DxfTextDocument()
     dxfCsvObj = DxfCsvDocument()
     dxfdoc = DxfDocument.objects.get(id=docid)
@@ -208,10 +223,15 @@ def extractDxfEntities(doc, docid):
     dxfdoc.entity_count = entity_count
     dxfdoc.save()
 
-    dxfCsvObj.dxfCsv_id = docid
-    dxfCsvObj.dxfCsvName = csvPath
-    dxfCsvObj.save()
+    checkCsvDoc = DxfCsvDocument.objects.all()
+    checkPdfTextDoc = DxfTextDocument.objects.all()
 
-    dxfTextObj.dxfText_id = docid
-    dxfTextObj.dxfTextName = txtPath
-    dxfTextObj.save()
+    if csvPath not in [i.dxfCsvName for i in checkCsvDoc]:
+        dxfCsvObj.dxfCsv_id = docid
+        dxfCsvObj.dxfCsvName = csvPath
+        dxfCsvObj.save()
+
+    if txtPath not in [i.dxfTextName for i in checkPdfTextDoc]:
+        dxfTextObj.dxfText_id = docid
+        dxfTextObj.dxfTextName = txtPath
+        dxfTextObj.save()

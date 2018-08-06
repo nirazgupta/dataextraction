@@ -13,6 +13,7 @@ urlpatterns = [
     url(r'^deletedxf/(?P<id>\d+)/$', views.deleteDxfFile, name='deletedxf'),
     url(r'^viewImage/(?P<id>\d+)/$', views.viewImages, name='viewImage'),
     url(r'^viewPdfText/(?P<id>\d+)/$', views.viewPdfText, name='viewPdfText'),
+    url(r'^viewPdfCsv/(?P<id>\d+)/$', views.viewPdfCsv, name='viewPdfCsv'),
     url(r'^viewText/(?P<id>\d+)/$', views.showText, name='viewText'),
     url(r'^viewCsv/(?P<id>\d+)/$', views.showCsv, name='viewCsv'),
     

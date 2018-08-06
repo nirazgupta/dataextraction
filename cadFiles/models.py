@@ -16,6 +16,10 @@ class PdfImage(models.Model):
     created_at = models.DateTimeField(auto_now_add=True)
     pdfDoc = models.ForeignKey(Document, on_delete=models.CASCADE)
 
+class PdfCsv(models.Model):
+    csvFile = models.FileField(upload_to='media/pdfStore', blank=True)
+    created_at = models.DateTimeField(auto_now_add=True)
+    csvDoc = models.ForeignKey(Document, on_delete=models.CASCADE)
 
 class DxfDocument(models.Model):
     document = models.FileField()
