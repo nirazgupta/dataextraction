@@ -23,48 +23,81 @@ from urllib.parse import urlparse
 import dxfgrabber
 from django.core.files.temp import NamedTemporaryFile
 from base64 import b64encode
+from tabula import read_pdf, convert_into
 
 # Get the name of file from path by using split
 def extension(file):
         name, extension = os.path.splitext(file.name)
         return name
 
+
+
 # This function extracts the text from the supplied pdf file and returns the extracted text
-def extract_text(doc):
-    password = ""
-    extracted_text = ""
+# def extract_text(doc):
+#     password = ""
+#     extracted_text = ""
 
-    # Open the file in binary mode
-    fp = doc.open(mode='rb')
+#     # Open the file in binary mode
+#     fp = doc.open(mode='rb')
 
-    # Create parser object on the pdf content 
-    parser = PDFParser(fp)
+#     # Create parser object on the pdf content 
+#     parser = PDFParser(fp)
 
-    document = PDFDocument(parser, password)
+#     document = PDFDocument(parser, password)
 
-    # verify if docoment is extracttable 
-    if not document.is_extractable:
-        raise PDFTextExtractionNotAllowed
+#     # verify if docoment is extracttable 
+#     if not document.is_extractable:
+#         raise PDFTextExtractionNotAllowed
 
-    rsrcmgr = PDFResourceManager()
+#     rsrcmgr = PDFResourceManager()
 
-    # set parameters for analysis
-    laparams = LAParams()
+#     # set parameters for analysis
+#     laparams = LAParams()
 
-    device = PDFPageAggregator(rsrcmgr, laparams=laparams)
+#     device = PDFPageAggregator(rsrcmgr, laparams=laparams)
 
-    interpreter = PDFPageInterpreter(rsrcmgr, device)
+#     interpreter = PDFPageInterpreter(rsrcmgr, device)
 
-    for page in PDFPage.create_pages(document):
-        interpreter.process_page(page)
-        layout = device.get_result()
-        for lt_obj in layout:
-            if isinstance(lt_obj, LTTextBox) or isinstance(lt_obj, LTTextLine):
-                extracted_text += lt_obj.get_text()
+#     for page in PDFPage.create_pages(document):
+#         interpreter.process_page(page)
+#         layout = device.get_result()
+#         for lt_obj in layout:
+#             if isinstance(lt_obj, LTTextBox) or isinstance(lt_obj, LTTextLine):
+#                 extracted_text += lt_obj.get_text()
+#                 extract_text = extracted_text.replace("\r","")
+#                 extract_text = extract_text.replace("\n","")
+#                 extract_text = extract_text.replace("  ","\n")
                 
-    #close the pdf file
-    fp.close()
-    return extracted_text
+#     #close the pdf file
+#     fp.close()
+#     return extract_text
+
+def extract_text(doc):
+    #open allows you to read the file
+    pdfFileObj = doc.open(mode='rb')
+    #The pdfReader variable is a readable object that will be parsed
+    pdfReader = PyPDF2.PdfFileReader(pdfFileObj)
+    #discerning the number of pages will allow us to parse through all #the pages
+    num_pages = pdfReader.numPages
+    count = 0
+    text = ""
+    #The while loop will read each page
+    while count < num_pages:
+        pageObj = pdfReader.getPage(count)
+        count +=1
+        text += pageObj.extractText()
+    #This if statement exists to check if the above library returned #words. It's done because PyPDF2 cannot read scanned files.
+    if text != "":
+        # text = text.encode("utf-8")
+        # text = text.replace("\r","")
+        # text = text.replace("\n","")
+        # text = re.sub('  +','\n',text)
+        text = text
+    #If the above returns as False, we run the OCR library textract to #convert scanned/image based PDF files into text
+    # else:
+    #     text = textract.process(fileurl, method='tesseract', language='eng')
+    return text
+
 
 # Scans and extracts images from pdf file
 def extractImage(myfile, docid):
@@ -144,17 +177,18 @@ def pdfToTable(doc, docid):
     fname =  split[0] + '.csv'
     path = join(MEDIA_ROOT, 'pdfStore', fname)
 
-    fileData = (doc.path, open(doc.path, 'rb')) #"rb" stands for "read bytes"
-    files = {'f': fileData} 
-    apiKey = "88sfqs4nmin1" 
-    fileExt = "csv" #format/file extension of final document
-    postUrl = "https://pdftables.com/api?key={0}&format={1}".format(apiKey, fileExt)
-    #the .format puts value of apiKey where {0} is, etc
-    response = requests.post(postUrl, files=files)
-    response.raise_for_status() # ensure we notice bad responses
-    downloadDir = path #directory where you want your file downloaded to 
-    with open(downloadDir, "wb") as f:
-        f.write(response.content) #write data to csv
+    # fileData = (doc.path, open(doc.path, 'rb')) #"rb" stands for "read bytes"
+    # files = {'f': fileData} 
+    # apiKey = "88sfqs4nmin1" 
+    # fileExt = "csv" #format/file extension of final document
+    # postUrl = "https://pdftables.com/api?key={0}&format={1}".format(apiKey, fileExt)
+    # #the .format puts value of apiKey where {0} is, etc
+    # response = requests.post(postUrl, files=files)
+    # response.raise_for_status() # ensure we notice bad responses
+    # downloadDir = path #directory where you want your file downloaded to 
+    # with open(downloadDir, "wb") as f:
+    #     f.write(response.content) #write data to csv
+    convert_into(doc.path, path, encoding='cp1252', pages="all")
 
     chkCsv = PdfCsv.objects.all()
 
@@ -163,7 +197,6 @@ def pdfToTable(doc, docid):
         saveTodb.csvDoc_id = docid
         saveTodb.csvFile = path
         saveTodb.save()
-    return response.content
 
 
 # Extracts data points and text from the dxf file.
@@ -185,7 +218,6 @@ def extractDxfEntities(doc, docid):
     layer_count = len(dxf.layers) # collection of layer definitions
     block_definition_count = len(dxf.blocks) # dict like collection of block definitions
     entity_count = len(dxf.entities) # list like collection of entities
-
 
     output = [entity for entity in dxf.entities if entity.layer == '0']
 

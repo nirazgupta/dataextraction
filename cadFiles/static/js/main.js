@@ -223,20 +223,22 @@ $('document').ready(function(){
 
 	var input = document.getElementById( 'file-upload' );
 	var infoArea = document.getElementById( 'file-upload-filename' );
-	
-	input.addEventListener( 'change', showFileName );
+	if(input != null){
+		input.addEventListener( 'change', showFileName );
 
-	function showFileName( event ) {
-	
-	// the change event gives us the input it occurred in 
-	var input = event.srcElement;
-	
-	// the input has an array of files in the `files` property, each one has a name that you can use. We're just using the name here.
-	var fileName = input.files[0].name;
-	
-	// use fileName however fits your app best, i.e. add it into a div
-	infoArea.value =  fileName;
+		function showFileName( event ) {
+		
+		// the change event gives us the input it occurred in 
+		var input = event.srcElement;
+		
+		// the input has an array of files in the `files` property, each one has a name that you can use. We're just using the name here.
+		var fileName = input.files[0].name;
+		
+		// use fileName however fits your app best, i.e. add it into a div
+		infoArea.value =  fileName;
+		}
 	}
+	
 });
 
 $(function() {
@@ -258,38 +260,24 @@ $(function() {
 
 
 
-  $.ajax({ 
-	url: "/add", 
-	type: 'GET', 
-	dataType: 'json', 
-	async: true, 
-	data: {},  
-	success: function (data) { 
-		console.log(data)
-		// var pos_data = JSON.parse(data); 
-		// const loadingTask = PDFJS.getDocument("/test.pdf");
-		// const pdf = await loadingTask.promise;
-	
-		// // Load information from the first page.
-		// const page = await pdf.getPage(1);
-	
-		// const scale = 1;
-		// const viewport = page.getViewport(scale);
-	
-		// // Apply page dimensions to the <canvas> element.
-		// const canvas = document.getElementById("pdf");
-		// const context = canvas.getContext("2d");
-		// canvas.height = viewport.height;
-		// canvas.width = viewport.width;
-	
-		// // Render the page into the <canvas> element.
-		// const renderContext = {
-		// canvasContext: context,
-		// viewport: viewport
-		// };
-		// await page.render(renderContext);
-		// console.log("Page rendered!");
-	}
-})
+//  $(document).ready(function(){
+// 	alert('ok')
+// 	$.ajax({
+// 		type: 'GET',
+// 		url:'viewPdfCsv/',
+// 		data: { },
+// 		success: function(){
+// 			console.log(data)
+			
+// 			var container = document.getElementById('example');
+// 				var hot = new Handsontable(container, {
+// 				data: data,
+// 				rowHeaders: true,
+// 				colHeaders: true
+// 				});
 
+// 			}
+		
+// 		});
+//  });
   

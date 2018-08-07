@@ -1,5 +1,6 @@
 from django.shortcuts import render
 from django.shortcuts import render,redirect, render_to_response, get_object_or_404
+from django.template.response import TemplateResponse
 from django.http import HttpResponse, HttpResponseRedirect
 from django.template.loader import get_template
 from django.core.files.uploadedfile import *
@@ -18,7 +19,6 @@ from django_tables2.tables import Table
 from tabulate import tabulate
 import pyexcel as p
 import django_excel as excel
-
 
 
 
@@ -53,7 +53,6 @@ def file_add(request):
     return render(request, 'cadFiles/simple_upload.html')
 
 def DocumentView(request):
-    # return HttpResponse('Hello from posts.')
     pdfdoc = Document.objects.all()[:10]
     dxfdoc = DxfDocument.objects.all()[:10]
 
@@ -163,9 +162,13 @@ def viewPdfCsv(request, id):
     doc = PdfCsv.objects.get(csvDoc_id=id)
     path = doc.csvFile.path
     f = open(path, 'r')
-    sheet = excel.pe.Sheet(path)
-    
-    return excel.make_response(sheet, "csv")
+
+    csvRead = csv.reader(f, delimiter=",")
+    data = [i for i in csvRead]
+
+    filename = os.path.basename(path)
+    sheet = excel.pe.Sheet(data)
+    return excel.make_response_from_array(sheet, "csv", file_name=filename)
 
 def dxfExtract(request, id):
     doc = DxfDocument.objects.get(id=id)

@@ -2,16 +2,72 @@
 {% load static %}
 
 
+
 {% block body %}
 
 <div class="container-fluid">
     <div class="container">
         <h5 class="center-align teal lighten-3" > IMAGES FROM PDF FILE </h5>
-
         <div class="row" id="card_scroll_img" contenteditable="true">
-                <div>{{csv}}</div>>
+            <div class="table-responsive">
+                <h1 align="center">
+                    Load Table data from PDF.
+                </h1>
+                </br>
+                <div align="center">
+                <button type="button" name="load_data" id="load_data" class="btn btn-info">Load Data</button>
+                </div>
+                </br>
+            <div id="pdftable">
+            </div>
+            </div>
+        
+  
+        
         </div>
         <a href="/files" class="btn">Go Back</a>
     </div>
 </div>
+
+{% block javascript %}
+    <script type="text/javascript">
+        
+        $(document).ready(function(){
+           $('#load_data').click(function(){
+            $.ajax({
+                type: 'GET',
+                url:'{{filename}}',
+                dataType:"Text",
+                success:function(data)
+                {
+
+                    var tbl_data = data.split(/\r?|\r/);
+                    var table_data = '<table class="table table-bordered table-striped">';                    
+                    for(var count = 0; count < tbl_data.length; count++)
+                        {
+                            var cell_data = tbl_data[count].split(",");
+                            table_data += '<tr>';
+                            for(var cell_count = 0; cell_count < cell_data.length; cell_count++)
+                            {
+                                if(count === 0)
+                                {
+                                    table_data += '<th>'+cell_data[cell_count]+'</th>';
+                                }
+                                else
+                                {
+                                    table_data += '<td>'+cell_data[cell_count]+'</td>';
+                                }
+                            }
+                            table_data += '</tr>';
+                        }
+                        table_data += '</table>';
+                        $('#example').html(table_data);
+                }
+                
+            });
+           });
+            
+        });
+    </script>
+    {% endblock %}
 {% endblock %}
