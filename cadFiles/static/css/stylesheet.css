@@ -34,7 +34,7 @@
 #card_scroll {
     overflow-y: scroll;
     /* position: absolute; */
-    height: 33%;
+    height: 70%;
 }
 #card_scroll_img {
     overflow-y: scroll;
@@ -49,4 +49,29 @@
 #fileUpload {
     margin-right: 5px;
     margin-top: -6px;
+}
+
+#fileOption {
+    margin-top: 15px;
+}
+
+#file_detail {
+    width: 50%;
+}
+
+#pdf_links {
+    padding-left:5px;
+    padding-right: 10px;
+    color: darkgreen;
+  
+}
+
+#list_horizontal li {
+    display: inline;
+    
+}
+
+#list_horizontal li a {
+    padding: 20px;
+    
 }

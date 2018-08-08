@@ -37,7 +37,7 @@ def file_add(request):
             if myfile.name.endswith('.pdf'):
                 doc = Document(document=myfile)
                 doc.save()
-                return HttpResponseRedirect(reverse('files'))
+                return HttpResponseRedirect(reverse('pdffiles'))
 
         if doc_type == 'dxf':
             myfile = request.FILES['myfile']
@@ -45,78 +45,44 @@ def file_add(request):
             if myfile.name.endswith('.dxf'):
                 doc = DxfDocument(document=myfile)
                 doc.save()
-                return HttpResponseRedirect(reverse('files'))
+                return HttpResponseRedirect(reverse('dxffiles'))
         else:
             messages.error(request, 'It is not a text file.')
         return render(request, 'cadFiles/simple_upload.html', {'message': 'Please select an option for pdf or dxf file.'})
         
     return render(request, 'cadFiles/simple_upload.html')
 
-def DocumentView(request):
+    
+def PdfView(request):
     pdfdoc = Document.objects.all()[:10]
-    dxfdoc = DxfDocument.objects.all()[:10]
 
     context = {
         "pdfFiles": pdfdoc,
+    }
+    return render(request, 'cadFiles/file_list.html', context)
+
+def DxfView(request):
+    dxfdoc = DxfDocument.objects.all()[:10]
+    context = {
         "dxfFiles": dxfdoc
     }
-    return render(request, 'cadFiles/index.html', context)
+    return render(request, 'cadFiles/file_list.html', context)
 
 def deletePdfFile(request, id):
-    doc = Document.objects.all()[:10]
     getDocument = Document.objects.get(id=id)
     documentPath = getDocument.document.path
-    delFromPdfText = PdfText.objects.all()
-    delFromPdfImage = PdfImage.objects.all()
 
-    if delFromPdfText:
-        if getDocument.id in [id.pdfDoc_id for id in delFromPdfText]:
-            getPdfTextDoc = PdfText.objects.get(pdfDoc_id=id)
-            pdfTextDocPath = getPdfTextDoc.textFile.path
-            if getPdfTextDoc.pdfDoc_id == getDocument.id:
-                getPdfTextDoc.delete()
-                os.remove(pdfTextDocPath)
-
-    if delFromPdfImage:
-        if getDocument.id in [id.pdfDoc_id for id in delFromPdfImage]:
-            getPdfImageDoc = PdfImage.objects.filter(pdfDoc_id=getDocument.id)
-            for i in getPdfImageDoc:
-                print(i.imageFile.path)
-                pdfImageDocPath = i.imageFile.path
-                os.remove(pdfImageDocPath)
-            getPdfImageDoc.delete()
-            getDocument.delete()
-            os.remove(documentPath)
-    else:
-        getDocument.delete()
-        os.remove(documentPath)
-    return HttpResponseRedirect(reverse('files'))
+    getDocument.delete()
+    os.remove(documentPath)
+    return HttpResponseRedirect(reverse('pdffiles'))
 
 def deleteDxfFile(request, id):
-    doc = DxfDocument.objects.all()[:10]
     getDocument = DxfDocument.objects.get(id=id)
     DxfDocpath = getDocument.document.path
-
-    delFromDxfCsv = DxfCsvDocument.objects.get(dxfCsv_id = id)
-    delFromDxfText = DxfTextDocument.objects.get(dxfText_id = id)
-
-    if delFromDxfCsv:
-        if getDocument.id == delFromDxfCsv.dxfCsv_id:
-            csvPath = delFromDxfCsv.dxfCsvName.path
-            os.remove(csvPath)
-            delFromDxfCsv.delete()
-
-    if delFromDxfText:
-        if getDocument.id == delFromDxfText.dxfText_id:
-            txtPath = delFromDxfText.dxfTextName.path
-            os.remove(txtPath)
-            delFromDxfText.delete()
-            getDocument.delete()
-            os.remove(DxfDocpath)
-    else:
-        getDocument.delete()
-        os.remove(DxfDocpath)
-    return HttpResponseRedirect(reverse('files'))
+    
+    getDocument.delete()
+    os.remove(DxfDocpath)
+    return HttpResponseRedirect(reverse('dxffiles'))
 
 
 def details(request, id):
@@ -126,86 +92,95 @@ def details(request, id):
     }
     return render(request, 'cadFiles/details.html', context)
 
+
+def viewImages(request, id):
+    if PdfImage.objects.filter(pdfDoc_id=id).exists():
+        doc = PdfImage.objects.filter(pdfDoc_id=id)
+        context = {
+            'item': doc
+        }
+        return render(request, 'cadFiles/viewImages.html', context)
+    else:
+        context = {
+            'pdfText': 'Please extract the file first.'
+        }
+        return render(request, 'cadFiles/viewImages.html', context)
+
+def viewPdfText(request, id):
+    if PdfText.objects.filter(pdfDoc_id=id).exists(): 
+        doc = PdfText.objects.get(pdfDoc_id=id)
+        path = doc.textFile.path
+        f = open(path, 'r', encoding='utf-8')
+        data = f.read()
+        context = {
+            'pdfText': data
+        }
+        return render(request, 'cadFiles/viewPdfText.html', context)
+    else:
+        context = {
+            'pdfText': 'Please extract the file first.'
+        }
+        return render(request, 'cadFiles/viewPdfText.html', context)
+
+def viewPdfCsv(request, id):
+    doc = Document.objects.get(id=id)
+    pdfToTable(doc.document, docid=id)
+
+    csvDoc = PdfCsv.objects.get(csvDoc_id = id)
+    if PdfCsv.objects.filter(csvDoc_id = id).exists():
+        path = csvDoc.csvFile.path
+        f = open(path, 'r')
+
+        csvRead = csv.reader(f, delimiter=",")
+        data = [i for i in csvRead]
+
+        filename = os.path.basename(path)
+        sheet = excel.pe.Sheet(data)
+        return excel.make_response_from_array(sheet, "csv", file_name=filename)
+
+
 def pdfExtract(request, id):
     doc = Document.objects.get(id=id)
     savePdfText(doc.document, docid=id)
     extractImage(doc.document, docid=id)
-    pdfToTable(doc.document, docid=id)
-
-    pdfdoc = Document.objects.all()[:10]
-    dxfdoc = DxfDocument.objects.all()[:10]
-
-    context = {
-        "pdfFiles": pdfdoc,
-        "dxfFiles": dxfdoc
-    }
-    return render(request, 'cadFiles/index.html', context)
-
-def viewImages(request, id):
-    doc = PdfImage.objects.filter(pdfDoc_id=id)
-    context = {
-        'item': doc
-    }
-    return render(request, 'cadFiles/viewImages.html', context)
-
-def viewPdfText(request, id):
-    doc = PdfText.objects.get(pdfDoc_id=id)
-    path = doc.textFile.path
-    f = open(path, 'r', encoding='utf-8')
-    data = f.read()
-    context = {
-        'pdfText': data
-    }
-    return render(request, 'cadFiles/viewPdfText.html', context)
-
-def viewPdfCsv(request, id):
-    doc = PdfCsv.objects.get(csvDoc_id=id)
-    path = doc.csvFile.path
-    f = open(path, 'r')
-
-    csvRead = csv.reader(f, delimiter=",")
-    data = [i for i in csvRead]
-
-    filename = os.path.basename(path)
-    sheet = excel.pe.Sheet(data)
-    return excel.make_response_from_array(sheet, "csv", file_name=filename)
+    
+    return HttpResponseRedirect(reverse('pdffiles'))
 
 def dxfExtract(request, id):
     doc = DxfDocument.objects.get(id=id)
     extractDxfEntities(doc.document, docid=id)
-
-    pdfdoc = Document.objects.all()[:10]
-    dxfdoc = DxfDocument.objects.all()[:10]
-
-    context = {
-        "pdfFiles": pdfdoc,
-        "dxfFiles": dxfdoc
-    }
-    return render(request, 'cadFiles/index.html', context)
-
+    return HttpResponseRedirect(reverse('dxffiles'))
 
 def showText(request, id):
-    doc = DxfTextDocument.objects.get(dxfText_id=id)
-    filepath = doc.dxfTextName.path
+    if DxfTextDocument.objects.filter(dxfText_id=id).exists():
+        doc = DxfTextDocument.objects.get(dxfText_id=id)
+        filepath = doc.dxfTextName.path
 
-    f = open(filepath, 'r', encoding='utf-8')
-    file_content = f.read()
-    f.close()
-    context = {
-    'dxfText': file_content
-    }
-    return render(request, 'cadFiles/viewPdfText.html', context)
+        f = open(filepath, 'r', encoding='utf-8')
+        file_content = f.read()
+        f.close()
+        context = {
+        'dxfText': file_content
+        }
+        return render(request, 'cadFiles/viewPdfText.html', context)
+    else:
+        context = {
+        'dxfText': 'Please extract the file first.'
+        }
+        return render(request, 'cadFiles/viewPdfText.html', context)
 
 def showCsv(request, id):
-    csvDoc = DxfCsvDocument.objects.get(dxfCsv_id = id)
-    data = pd.read_csv(csvDoc.dxfCsvName.path)
-    df_table = data.to_dict(orient='dict')
+    if DxfCsvDocument.objects.filter(dxfCsv_id = id).exists():
+        csvDoc = DxfCsvDocument.objects.get(dxfCsv_id = id)
+        data = pd.read_csv(csvDoc.dxfCsvName.path)
+        df_table = data.to_dict(orient='dict')
 
-    context = {
-    'tableX': df_table.get('X').values,
-    'tableY': df_table.get('Y').values
-    }
-    return render(request, 'cadFiles/viewPdfText.html', context)
+        context = {
+        'tableX': df_table.get('X').values,
+        'tableY': df_table.get('Y').values
+        }
+        return render(request, 'cadFiles/viewPdfText.html', context)
+    return HttpResponseRedirect(reverse('dxffiles'))
     
     
 

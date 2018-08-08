@@ -35,10 +35,14 @@
                     </div>
                
             </div>
-        
-
         {% endif %}
-        <a href="/files" class="btn">Go Back</a>
+        {% if pdfText %}
+            <a href="/pdffiles" class="btn">Go Back</a>
+        {% elif dxfText %}
+            <a href="/dxffiles" class="btn">Go Back</a>
+        {% elif tableX %}
+            <a href="/dxffiles" class="btn">Go Back</a>
+        {% endif %}
     </div>
 </div>
 {% endblock %}

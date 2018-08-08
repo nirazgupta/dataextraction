@@ -5,7 +5,9 @@ from . import views
 urlpatterns = [
     # url(r'^$', views.HomePageView.as_view(), name='index'),
     url(r'^$', views.file_add, name='index'),
-    url(r'^files/', views.DocumentView, name='files'),
+
+    url(r'^pdffiles/', views.PdfView, name='pdffiles'),
+    url(r'^dxffiles/', views.DxfView, name='dxffiles'),
     url(r'^details/(?P<id>\d+)/$', views.details, name='details'),
     url(r'^pdfExtract/(?P<id>\d+)/$', views.pdfExtract, name='pdfExtract'),
     url(r'^dxfExtract/(?P<id>\d+)/$', views.dxfExtract, name='dxfExtract'),

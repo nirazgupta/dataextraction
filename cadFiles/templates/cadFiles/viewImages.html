@@ -4,11 +4,6 @@
 
 {% block body %}
     
-    {% comment %} <ul class="collection">
-        {% for file in files %}
-            <li class="collection-item"><a href="/details/{{file.id}}">{{file.document}}</a></li>
-        {% endfor %}
-    </ul> {% endcomment %}
 <div class="container-fluid">
         <h5 class="center-align teal lighten-3" > IMAGES FROM PDF FILE </h5>
         <div class="row" id="card_scroll_img" >
@@ -22,7 +17,7 @@
                 </div>
             {% endfor %} 
         </div>
-        <a href="/files" class="btn">Go Back</a>
+        <a href="/pdffiles" class="btn">Go Back</a>
 
 </div>
 {% endblock %}
