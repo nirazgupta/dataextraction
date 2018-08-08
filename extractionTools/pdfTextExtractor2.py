@@ -152,6 +152,10 @@ def savePdfText(doc, docid):
     split = os.path.splitext(doc.name)
     fname =  split[0] + '.txt'
 
+    dest_file = MEDIA_ROOT + r'\pdfStore\\'
+    if not os.path.exists(dest_file):
+        os.makedirs(dest_file)
+
     path = join(MEDIA_ROOT, 'pdfStore', fname)
     print(path)
     f = open(path, "w", encoding='utf-8')
