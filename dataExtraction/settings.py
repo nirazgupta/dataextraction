@@ -41,6 +41,7 @@ INSTALLED_APPS = [
     'reset_migrations',
     'django_tables2',
     'gunicorn',
+    'storages',
     
 ]
 
@@ -153,3 +154,23 @@ MEDIA_URL = '/media/'
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 
 
+
+AWS_ACCESS_KEY_ID = 'AKIAINYFIZHAVD2EYECQ'
+AWS_SECRET_ACCESS_KEY = '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'
+AWS_STORAGE_BUCKET_NAME = 'dataextract-media'
+AWS_S3_CUSTOM_DOMAIN = '%s.s3.amazonaws.com' % AWS_STORAGE_BUCKET_NAME
+
+AWS_S3_OBJECT_PARAMETERS = {
+    'CacheControl': 'max-age=86400',
+}
+
+# AWS_LOCATION = 'static'
+# STATICFILES_STORAGE = 'storages.backends.s3boto3.S3Boto3Storage'
+# STATIC_URL = "https://%s/%s/" % (AWS_S3_CUSTOM_DOMAIN, AWS_LOCATION)
+
+# DEFAULT_FILE_STORAGE = 'mysite.storage_backends.MediaStorage'  # <-- here is where we reference it
+
+# MEDIAFILES_LOCATION = 'media'  
+# MEDIA_URL = "https://%s/%s/" % (AWS_S3_CUSTOM_DOMAIN, MEDIAFILES_LOCATION)
+# # DEFAULT_FILE_STORAGE = 'storage_backends.MediaStorage'
+# MEDIA_ROOT = "https://%s/%s/" % (AWS_S3_CUSTOM_DOMAIN, MEDIAFILES_LOCATION)
