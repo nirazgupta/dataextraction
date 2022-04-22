@@ -62,7 +62,7 @@ pyexcel-webio==0.1.4
 PyMuPDF==1.13.15
 pyOpenSSL==18.0.0
 pyparsing==2.2.0
-PyPDF2==1.26.0
+PyPDF2==1.27.5
 pytest==3.6.4
 python-dateutil==2.7.3
 pytz==2018.5
